@@ -58,6 +58,13 @@ Primary visual ingredients:
 
 The infinity motif should signal connection and gathering. Do not repeat it so often that it becomes background decoration without meaning.
 
+### Continuous infinity journey
+The preferred signature homepage interaction is a continuous line/path derived from the infinity motif. It should appear to originate from the Good Crowd identity/hero and travel down the page as the visitor scrolls, visually connecting people, place, stories, partnerships and outcomes.
+
+Do not distort or continuously morph the production logo itself. Preserve the supplied logo asset and implement the travelling line as a separate decorative SVG/path derived from the same geometric language. The line should support the content hierarchy rather than cross important text or controls.
+
+Prefer a lightweight SVG path/progress implementation. Do not introduce WebGL, canvas or a heavy animation framework merely for novelty. The experience must degrade gracefully and provide a static/reduced-motion treatment.
+
 ## Photography
 Photography should feel candid, regional, warm and human. Prioritise:
 - real community gatherings;
@@ -68,6 +75,19 @@ Photography should feel candid, regional, warm and human. Prioritise:
 - details and “in-between” moments rather than staged corporate poses.
 
 Avoid generic corporate stock photography. Do not pull arbitrary internet photography into production. If approved photography is unavailable, use controlled placeholders and clearly flag the asset gap.
+
+## Video
+Event video can become a major editorial device when approved footage exists. Video should feel documentary and experiential rather than like a corporate background loop.
+
+Requirements:
+- muted by default where autoplay is used;
+- plays inline;
+- no essential message depends on audio;
+- compressed and appropriately sized;
+- poster image supplied;
+- lazy-load below-the-fold video where practical;
+- reduced-motion/static alternative available;
+- do not add unapproved/generated event footage to production.
 
 ## Tone of voice
 Copy should be welcoming, purposeful, confident and joyful without forced hype. It should speak credibly to communities, councils, government bodies, sponsors and partners while remaining recognisably human.
@@ -103,7 +123,7 @@ Use for:
 - editorial scrolling rhythm;
 - personality-led presentation.
 
-Important: Good Crowd currently has no approved impact statistics in the supplied website material. Do not invent numbers to reproduce this reference. A reusable animated-stat component may be built for later use, but it must not publish fabricated values.
+Important: Good Crowd currently has no approved achieved impact statistics in the supplied launch website material. Do not invent numbers to reproduce this reference. A reusable animated-stat component may be built for later use, but it must not publish fabricated values. Strategic targets must never be presented as achieved outcomes.
 
 ### Interchange WA
 Reference: https://interchangewa.org.au/
@@ -116,16 +136,103 @@ Use for:
 
 Translate these interaction principles primarily into People / Place / Prosperity and/or the Good Crowd Values. Hover behaviour must have keyboard/focus equivalents and sensible touch-device behaviour.
 
+## Extended interaction references
+The following Awwwards-discovered references extend the interaction language. They are references for mechanics, rhythm and composition only.
+
+### Ascend
+Reference: https://ascendmarketing.xyz/
+
+Use for:
+- a strong visual element that progresses vertically with scroll;
+- inspiration for the Good Crowd continuous infinity journey;
+- a vertical partner/client-logo rail on large desktop layouts;
+- maintaining visual continuity between sections rather than treating each section as an isolated block.
+
+Good Crowd translation:
+- the infinity-derived SVG line originates at/near the hero identity and continues through the homepage;
+- it may pass behind imagery/cards and visually connect major sections;
+- a partner/community/supporter logo rail may move vertically on wide screens once real approved logos exist;
+- on tablet/mobile, replace the vertical rail with a conventional horizontal or wrapped logo treatment rather than forcing the desktop interaction.
+
+### Jaéco
+Reference: https://www.jaeco.fr/
+
+Use for:
+- cinematic moving/video project presentation;
+- editorial case-study rhythm;
+- integrating quantified outcomes into a project/event story rather than displaying disconnected counters;
+- immersive transitions between story, footage and results.
+
+Good Crowd translation:
+- create a reusable future `EventStory` / `ImpactStory` pattern for approved completed events;
+- support video/poster, event name, region/date, short editorial narrative, measured impact figures, imagery and a full-story CTA;
+- potential measured fields include attendance, visitor origin, local spend, local suppliers, volunteer participation and reach only when those values have been approved and substantiated;
+- do not use Business Plan targets or placeholder numbers as achieved event outcomes.
+
+### Verticalloop — Design for Good
+Reference: https://www.verticalloop.com/
+
+Use for:
+- overall purpose-led visual restraint;
+- oversized editorial typography;
+- generous whitespace;
+- integrated client/partner scrolling treatments;
+- balancing expressive design with social-impact credibility.
+
+Good Crowd translation:
+- avoid filling every section with cards, borders or animation;
+- use large typography and warm imagery to create rhythm;
+- partner/community logos should feel part of the composition rather than a generic sponsor-logo footer wall.
+
+### Infinity Constellation
+Reference: https://www.infinityconstellation.com/
+
+Use for:
+- team/founder presentation near the lower part of a page;
+- treating people as part of a connected collective rather than generic corporate profile cards;
+- portrait-led editorial layouts and layered geometry.
+
+Good Crowd translation:
+- founder/team presentation may use oversized or oval/circular portrait crops, infinity-derived geometry, role labels and concise approved biographies;
+- focus/hover may gently bring one profile forward while maintaining accessible content order;
+- mobile treatment should become a clear stacked editorial sequence;
+- do not invent team members or biographies.
+
+## Partner/community logo motion
+A vertical moving logo rail may be used on wide desktop screens if sufficient approved partner/community/supporter logos exist. It must not become a sticky obstruction or compete with primary content.
+
+Requirements:
+- real approved logos only;
+- descriptive accessible labelling where needed;
+- pause/reduced-motion behaviour;
+- no continuous high-speed marquee;
+- transform to horizontal/wrapped presentation on smaller viewports;
+- preserve logo integrity and adequate contrast.
+
+## Event impact storytelling
+Impact should be communicated as evidence attached to a real story, not as decorative numbers. Once measured and approved event data exists, the preferred hierarchy is:
+1. event footage or strong imagery;
+2. event name, region and date;
+3. concise editorial story;
+4. measured outcome figures;
+5. supporting photo/video moments;
+6. link to the full Event Story.
+
+Animated figures may count/reveal when entering the viewport, but the final numeric value must always be available without animation. Strategic targets, projections and ambitions must be clearly distinguished from measured outcomes and should not populate this component by default.
+
 ## Motion principles
-Motion should reinforce gathering, connection and discovery. Appropriate patterns include subtle card movement, layered reveals, controlled colour transitions and restrained line/infinity movement.
+Motion should reinforce gathering, connection and discovery. Appropriate patterns include subtle card movement, layered reveals, controlled colour transitions, restrained line/infinity movement, video-led editorial transitions and slow partner-logo movement.
 
 Requirements:
 - respect `prefers-reduced-motion`;
 - no essential information may depend on animation;
 - avoid excessive parallax or scroll-jacking;
+- preserve native browser scrolling;
 - avoid animation that delays navigation or reading;
-- favour CSS where it provides the same result cleanly;
-- use Motion for React only where interaction genuinely benefits from it.
+- avoid excessive simultaneous motion;
+- favour CSS and SVG where they provide the same result cleanly;
+- use Motion for React only where interaction genuinely benefits from it;
+- test performance on mid-range mobile hardware, not only desktop.
 
 ## Visual direction image
 If `docs/design/homepage-direction.png` is present, treat it as concept direction only. It is not a pixel-perfect specification and may contain generated imagery or illustrative decisions that are not approved production content. Brand rules and approved copy remain authoritative.
