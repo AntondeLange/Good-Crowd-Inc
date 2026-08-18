@@ -127,6 +127,11 @@
   --journey-progress: 1;
 }
 
+.home-page .container-crowd {
+  position: relative;
+  z-index: 2;
+}
+
 .journey-path-progress {
   stroke-dasharray: 1;
   stroke-dashoffset: calc(1 - var(--journey-progress));

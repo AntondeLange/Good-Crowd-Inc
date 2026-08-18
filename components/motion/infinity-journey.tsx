@@ -59,7 +59,7 @@ export function InfinityJourney() {
     <div
       ref={shellRef}
       aria-hidden="true"
-      className="journey-shell pointer-events-none absolute inset-0 z-0 overflow-hidden"
+      className="journey-shell pointer-events-none absolute inset-0 z-[1] overflow-hidden"
     >
       <svg
         viewBox="0 0 1200 4700"
@@ -72,8 +72,8 @@ export function InfinityJourney() {
           fill="none"
           stroke="var(--color-earth)"
           strokeLinecap="round"
-          strokeWidth="18"
-          opacity="0.17"
+          strokeWidth="24"
+          opacity="0.24"
           vectorEffect="non-scaling-stroke"
         />
         <path
@@ -83,7 +83,8 @@ export function InfinityJourney() {
           fill="none"
           stroke="var(--color-sand)"
           strokeLinecap="round"
-          strokeWidth="8"
+          strokeWidth="10"
+          opacity="0.72"
           vectorEffect="non-scaling-stroke"
         />
       </svg>

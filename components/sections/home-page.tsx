@@ -15,9 +15,9 @@ import {
 
 export function HomePage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="home-page relative overflow-hidden">
       <InfinityJourney />
-      <div className="relative z-10">
+      <div className="relative">
         <HomeHero />
         <PeoplePlaceProsperity />
         <MissionManifesto />

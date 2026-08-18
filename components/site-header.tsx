@@ -6,7 +6,7 @@ import { siteNav } from "@/lib/site-content";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-crowd-brown/10 bg-crowd-cream/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-crowd-brown/10 bg-crowd-cream shadow-[0_10px_30px_rgba(96,46,23,0.06)]">
       <div className="container-crowd flex min-h-20 items-center justify-between gap-5 py-3">
         <Link
           href="/"

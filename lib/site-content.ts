@@ -14,7 +14,18 @@ export const homeHero = {
   secondaryCta: { label: "Our Story", href: "/about" },
 } as const;
 
-export const pillars = [
+type EditorialImage = {
+  src: string;
+  alt: string;
+};
+
+type Pillar = {
+  title: "People" | "Place" | "Prosperity";
+  copy: string;
+  image?: EditorialImage;
+};
+
+export const pillars: readonly Pillar[] = [
   {
     title: "People",
     copy: "Good Crowd creates moments that bring communities together, building connection, pride and a genuine sense of belonging.",
@@ -27,7 +38,7 @@ export const pillars = [
     title: "Prosperity",
     copy: "Good Crowd designs events that direct economic energy into local businesses, producers and makers.",
   },
-] as const;
+];
 
 export const workWithUsAudiences = [
   {
@@ -44,7 +55,7 @@ export const workWithUsAudiences = [
   },
   {
     title: "Event partners, suppliers & volunteers",
-    copy: "Take part in making Good Crowd events happen through future confirmed participation pathways.",
+    copy: "Connect with Good Crowd about participating in regional events as plans and opportunities are confirmed.",
   },
 ] as const;
 

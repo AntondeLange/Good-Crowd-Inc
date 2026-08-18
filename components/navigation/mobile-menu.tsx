@@ -40,7 +40,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
   }, [isOpen]);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         ref={buttonRef}
         type="button"

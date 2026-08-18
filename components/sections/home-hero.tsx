@@ -2,6 +2,9 @@ import { GoodCrowdLogo } from "@/components/brand/good-crowd-logo";
 import { ButtonLink } from "@/components/ui/button-link";
 import { homeHero } from "@/lib/site-content";
 
+const HERO_LIGHT_MARKERS = Array.from({ length: 8 });
+const HERO_STAGE_BAR_HEIGHTS = ["h-20", "h-28", "h-24", "h-32", "h-[5.5rem]"] as const;
+
 export function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-crowd-brown text-crowd-cream">
@@ -43,35 +46,60 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="relative min-h-[24rem] overflow-hidden rounded-[2rem] border border-crowd-cream/15 bg-crowd-cream/10 p-5 shadow-crowd-lg backdrop-blur-sm sm:min-h-[28rem] md:p-7">
+        <div className="hero-media-stage relative min-h-[28rem] overflow-hidden rounded-[2.25rem] border border-crowd-cream/15 bg-crowd-cream/10 shadow-crowd-lg backdrop-blur-sm sm:min-h-[34rem]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(244,212,183,0.28),transparent_24%),radial-gradient(circle_at_78%_28%,rgba(251,249,244,0.16),transparent_28%),linear-gradient(135deg,rgba(40,21,14,0.72),rgba(159,120,90,0.72))]" />
           <div
             aria-hidden="true"
-            className="absolute -right-20 -top-16 z-0 h-56 w-56 rounded-full border-[18px] border-crowd-sand/20"
+            className="absolute inset-x-0 bottom-0 h-[58%] bg-[linear-gradient(180deg,transparent,rgba(40,21,14,0.35)_18%,rgba(96,46,23,0.78)_72%)]"
           />
           <div
             aria-hidden="true"
-            className="absolute bottom-12 right-10 z-0 hidden h-28 w-56 rounded-[50%] border-[14px] border-crowd-sand/25 sm:block"
+            className="absolute left-[-12%] top-[22%] h-40 w-[74%] rotate-[-6deg] rounded-[50%] border border-crowd-sand/40"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute right-[-18%] top-[14%] hidden h-56 w-[82%] rotate-[8deg] rounded-[50%] border-[18px] border-crowd-sand/20 sm:block"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute left-8 right-8 top-16 flex justify-between opacity-80"
+          >
+            {HERO_LIGHT_MARKERS.map((_, index) => (
+              <span
+                key={index}
+                className="h-2 w-2 rounded-full bg-crowd-sand shadow-[0_0_22px_rgba(244,212,183,0.75)]"
+              />
+            ))}
+          </div>
+
+          <div
+            aria-hidden="true"
+            className="absolute bottom-8 left-1/2 z-0 h-32 w-[120%] -translate-x-1/2 rounded-[50%] bg-crowd-brown/40 blur-sm"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute bottom-14 left-8 right-8 z-10 grid grid-cols-5 items-end gap-3 sm:left-10 sm:right-10 sm:gap-5"
+          >
+            {HERO_STAGE_BAR_HEIGHTS.map((height, index) => (
+              <span
+                key={`${height}-${index}`}
+                className={`${height} rounded-t-full bg-crowd-cream/20 ring-1 ring-crowd-cream/20 backdrop-blur-sm`}
+              />
+            ))}
+          </div>
+          <div
+            aria-hidden="true"
+            className="absolute bottom-20 right-8 z-20 hidden h-28 w-44 rounded-[50%] border-[12px] border-crowd-sand/55 sm:block"
           />
 
-          <div className="relative z-10 grid h-full content-between gap-8">
-            <div className="rounded-[1.5rem] bg-crowd-cream p-6 text-crowd-brown shadow-crowd">
-              <p className="eyebrow text-crowd-earth">Regional Australia</p>
-              <p className="mt-5 text-3xl font-black leading-tight tracking-tight md:text-4xl">
-                Bringing neighbouring regions together.
-              </p>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
-              {["Community pride", "Regional visibility", "Local economic energy"].map(
-                (label) => (
-                  <div
-                    key={label}
-                    className="min-h-24 rounded-[1.25rem] border border-crowd-cream/15 bg-crowd-brown/40 p-4 text-sm font-bold leading-5 text-crowd-cream/80"
-                  >
-                    {label}
-                  </div>
-                ),
-              )}
+          <div className="relative z-30 flex h-full min-h-[28rem] items-end p-5 sm:min-h-[34rem] sm:p-7">
+            <div className="w-full rounded-[1.75rem] border border-crowd-cream/20 bg-crowd-brown/40 p-5 backdrop-blur-sm sm:max-w-sm">
+              <div className="h-1.5 w-20 rounded-full bg-crowd-sand" />
+              <div className="mt-5 grid grid-cols-3 gap-2" aria-hidden="true">
+                <span className="h-16 rounded-[1rem] bg-crowd-cream/15" />
+                <span className="h-16 rounded-[1rem] bg-crowd-sand/25" />
+                <span className="h-16 rounded-[1rem] bg-crowd-cream/15" />
+              </div>
             </div>
           </div>
         </div>
