@@ -1,21 +1,46 @@
 import Link from "next/link";
-
-const links = [
-  ["About", "/about"],
-  ["Work With Us", "/work-with-us"],
-  ["Good Reads", "/stories"],
-  ["Contact", "/contact"]
-] as const;
+import { GoodCrowdLogo } from "@/components/brand/good-crowd-logo";
+import { MobileMenu } from "@/components/navigation/mobile-menu";
+import { ButtonLink } from "@/components/ui/button-link";
+import { siteNav } from "@/lib/site-content";
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-crowd-brown/10 bg-crowd-cream">
-      <div className="container-crowd flex min-h-20 items-center justify-between gap-8 py-4">
-        <Link href="/" className="text-xl font-black tracking-tight" aria-label="Good Crowd Inc home">GOOD CROWD INC.</Link>
-        <nav aria-label="Primary navigation" className="hidden gap-7 text-sm font-semibold md:flex">
-          {links.map(([label, href]) => <Link key={href} href={href} className="hover:underline focus-visible:underline">{label}</Link>)}
+    <header className="sticky top-0 z-50 border-b border-crowd-brown/10 bg-crowd-cream/95 backdrop-blur-md">
+      <div className="container-crowd flex min-h-20 items-center justify-between gap-5 py-3">
+        <Link
+          href="/"
+          className="block rounded-xl focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-crowd-focus"
+          aria-label="Good Crowd Inc home"
+        >
+          <GoodCrowdLogo
+            variant="onLight"
+            priority
+            className="h-16 w-16 md:h-20 md:w-20"
+          />
+        </Link>
+
+        <nav
+          aria-label="Primary navigation"
+          className="hidden items-center gap-1 text-sm font-bold lg:flex"
+        >
+          {siteNav.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="rounded-full px-4 py-3 text-crowd-brown/80 transition duration-crowd ease-crowd hover:bg-crowd-sand hover:text-crowd-brown focus-visible:bg-crowd-sand focus-visible:text-crowd-brown focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-crowd-focus"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
-        <Link href="/work-with-us" className="rounded-full bg-crowd-brown px-5 py-3 text-sm font-bold text-white">Work With Us</Link>
+
+        <div className="flex items-center gap-3">
+          <ButtonLink href="/work-with-us" className="hidden md:inline-flex">
+            Work With Us
+          </ButtonLink>
+          <MobileMenu links={siteNav} />
+        </div>
       </div>
     </header>
   );

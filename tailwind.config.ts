@@ -6,16 +6,35 @@ const config: Config = {
     extend: {
       colors: {
         crowd: {
-          brown: "#602E17",
-          earth: "#9F785A",
-          peach: "#F4D4B7",
-          cream: "#FBF9F4",
-          mist: "#F8F8F8"
+          brown: "var(--color-brown)",
+          earth: "var(--color-earth)",
+          sand: "var(--color-sand)",
+          peach: "var(--color-sand)",
+          cream: "var(--color-cream)",
+          mist: "var(--color-mist)",
+          ink: "var(--color-ink)",
+          focus: "var(--color-focus)",
         }
       },
+      fontFamily: {
+        body: "var(--font-body)",
+        display: "var(--font-display)",
+      },
       borderRadius: {
-        crowd: "2rem"
-      }
+        crowd: "var(--radius-lg)",
+        "crowd-sm": "var(--radius-sm)",
+        "crowd-md": "var(--radius-md)",
+      },
+      boxShadow: {
+        crowd: "var(--shadow-soft)",
+        "crowd-lg": "var(--shadow-lifted)",
+      },
+      transitionDuration: {
+        crowd: "var(--duration-crowd)",
+      },
+      transitionTimingFunction: {
+        crowd: "var(--ease-crowd)",
+      },
     }
   },
   plugins: []
