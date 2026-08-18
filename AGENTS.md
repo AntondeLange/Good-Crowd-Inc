@@ -6,10 +6,11 @@ Before implementing or redesigning the website, read:
 2. `docs/CODEX_IMPLEMENTATION_SPEC.md`
 3. `docs/content/WEBSITE_COPY.md`
 4. `docs/brand/BRAND_GUIDE.md`
-5. `docs/design/homepage-direction.png` if present
-6. approved assets under `public/brand` and `public/images`
+5. `docs/context/ORGANISATIONAL_CONTEXT.md`
+6. `docs/design/homepage-direction.png` if present
+7. approved assets under `public/brand` and `public/images`
 
-Treat the copy and brand documents as source-of-truth repository guidance. The visual direction image is concept direction only and must not override approved copy or brand rules.
+Treat the copy and brand documents as source-of-truth repository guidance. Use the organisational context document to distinguish public facts from internal strategy, future targets and governance material. The visual direction image is concept direction only and must not override approved copy or brand rules.
 
 ## Project intent
 Build and maintain the official Good Crowd Inc website from the approved website brief, copy and brand system. Do not invent claims, impact statistics, partner names, event data, contact details or downloadable collateral.
@@ -45,10 +46,12 @@ Hover behaviour must have keyboard/focus equivalents. Touch behaviour must not d
 ## Content integrity
 Approved source copy is authoritative. Preserve its meaning and voice. Do not fabricate missing content. Mark unresolved operational details as TODO/configuration rather than publishing assumptions.
 
-Do not fabricate statistics simply to implement the Event Society inspiration. A reusable stats component may be prepared for later approved data, but fabricated values must never appear as production facts.
+Strategic targets in organisational planning documents are not achieved impact statistics. A reusable stats component may be prepared for later approved data, but future targets or fabricated values must never appear as production achievements.
 
 ## Asset integrity
-Use real supplied Good Crowd logos. Do not trace or reconstruct them. If the correct production asset is missing, leave a controlled placeholder/TODO and report the gap.
+Use real supplied Good Crowd logos. Do not trace or reconstruct them. Production web assets belong under `public/brand` (logos/brand marks) and `public/images` (approved photography). Concept/reference design images belong under `docs/design`.
+
+If assets have been uploaded elsewhere in the repository, relocate/reference them into the correct structure before implementation rather than coding against accidental root-level paths.
 
 Generated visual concepts are not approved photography. They may guide composition and hierarchy only.
 
