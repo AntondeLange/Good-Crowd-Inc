@@ -39,7 +39,7 @@ const pathwayNotes = [
   "For host regions exploring events shaped around connection, visibility and place-based outcomes.",
   "For organisations wanting alignment with regional communities, local pride and purposeful participation.",
   "For destination, visitation and regional visibility conversations grounded in place.",
-  "For people and organisations interested in participating as plans and opportunities are confirmed.",
+  "For people and organisations interested in participating as plans and opportunities take shape.",
 ] as const;
 
 export default function WorkWithUsPage() {
@@ -63,15 +63,14 @@ export default function WorkWithUsPage() {
         title="Regional outcomes are stronger when the work is shared."
       >
         <p>
-          Good Crowd&apos;s model is collaborative by design. The organisation
-          intends to work with councils, government and tourism bodies, sponsors,
+          Good Crowd&apos;s model is collaborative by design. The organisation works
+          toward bringing councils, government and tourism bodies, sponsors,
           community organisations, local businesses, suppliers, volunteers and
-          other aligned partners.
+          other aligned partners into regional conversations.
         </p>
         <p>
-          The public site does not publish unconfirmed partner names, sponsor
-          claims, impact figures or prospectus downloads. Each conversation starts
-          with the region, the people involved and the outcome being explored.
+          Each conversation starts with the place, the people involved and the
+          outcome worth pursuing together.
         </p>
       </EditorialIntro>
 
@@ -90,8 +89,8 @@ export default function WorkWithUsPage() {
               </h2>
             </div>
             <p className="max-w-2xl text-lg leading-8 text-crowd-brown/75 lg:justify-self-end">
-              Each pathway is deliberately concise until detailed offers,
-              prospectus material and operational processes are approved.
+              Different partners bring different strengths. Good Crowd is designed
+              to create a clear place for each of them in a shared regional effort.
             </p>
           </div>
 
@@ -178,7 +177,7 @@ export default function WorkWithUsPage() {
       <SectionMediaBlock
         eyebrow="Councils, tourism and destination bodies"
         title="Visibility begins with place."
-        body="Good Crowd can be a collaborator around regional visibility, visitation, connection and place-based outcomes. This page keeps those conversations general until confirmed regions, funding or measured impact are approved for publication."
+        body="Good Crowd can collaborate around regional visibility, visitation, connection and place-based outcomes, with each opportunity shaped around the region and the people it is intended to serve."
         image={{
           src: "/images/place/canola-field-close-landscape.jpeg",
           alt: "A canola field landscape with foreground flowers and blue sky.",
@@ -190,7 +189,7 @@ export default function WorkWithUsPage() {
       <SectionMediaBlock
         eyebrow="Sponsors and community partners"
         title="Alignment before inventory."
-        body="Partnership opportunities should be shaped around regional communities, local pride and purposeful participation. Sponsorship inventory, benefits and prospectus material remain pending until approved."
+        body="Partnerships work best when they begin with shared values, regional relevance and purposeful participation rather than a one-size-fits-all package."
         image={{
           src: "/images/events/live-music-stage-branded.jpeg",
           alt: "A Good Crowd-branded outdoor live music stage with seated attendees.",
