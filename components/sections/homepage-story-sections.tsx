@@ -48,7 +48,7 @@ export function MissionManifesto() {
       <LuminousInfinity
         variant="background"
         sparkles={false}
-        className="absolute -right-32 top-1/2 z-0 hidden h-72 w-[38rem] -translate-y-1/2 rotate-[5deg] opacity-38 md:block"
+        className="absolute -right-40 top-1/2 z-0 hidden h-72 w-[42rem] -translate-y-1/2 rotate-[4deg] opacity-42 md:block"
       />
       <div className="container-crowd relative z-10 grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
         <div className="relative isolate">
@@ -252,7 +252,7 @@ export function PartnerCommunitySection() {
       <LuminousInfinity
         variant="partial"
         sparkles={false}
-        className="absolute right-[-18rem] top-1/2 h-[24rem] w-[44rem] -translate-y-1/2 rotate-[10deg] opacity-28 md:h-[30rem] md:w-[54rem]"
+        className="absolute right-[-29rem] top-1/2 h-[24rem] w-[56rem] -translate-y-1/2 rotate-[9deg] opacity-32 md:h-[30rem] md:w-[64rem]"
       />
       <div className="container-crowd grid gap-10 lg:grid-cols-[1fr_18rem] lg:items-center">
         <div>
@@ -286,13 +286,7 @@ export function PartnerCommunitySection() {
             </ul>
           </div>
         ) : (
-          <div className="hidden lg:block" aria-hidden="true">
-            <LuminousInfinity
-              variant="background"
-              sparkles={false}
-              className="h-80 w-80 rotate-[18deg] opacity-45"
-            />
-          </div>
+          <div className="hidden lg:block" aria-hidden="true" />
         )}
       </div>
     </section>
@@ -402,13 +396,13 @@ export function WorkWithUsSection() {
                       : "bg-crowd-cream"
                 }`}
               >
-                <LuminousInfinity
-                  variant="corner"
-                  sparkles={false}
-                  className={`absolute -right-24 -top-16 h-32 w-64 rotate-[18deg] transition duration-crowd ease-crowd group-hover:scale-105 group-focus-within:scale-105 ${
-                    index === 0 ? "opacity-38" : "opacity-48"
-                  }`}
-                />
+                {index === 0 ? (
+                  <LuminousInfinity
+                    variant="corner"
+                    sparkles={false}
+                    className="absolute -right-24 -top-16 h-32 w-64 rotate-[18deg] opacity-28 transition duration-crowd ease-crowd group-hover:scale-105 group-focus-within:scale-105"
+                  />
+                ) : null}
                 <p
                   className={`relative text-sm font-black ${
                     index === 0 ? "text-crowd-sand" : "text-crowd-brown"
@@ -467,12 +461,13 @@ export function FounderSection() {
             >
               <LuminousInfinity
                 variant="founder"
-                className="absolute left-1/2 top-8 h-48 w-72 -translate-x-1/2 rotate-[-8deg] opacity-58"
+                sparkles={false}
+                className="absolute left-1/2 top-8 h-48 w-72 -translate-x-1/2 rotate-[-8deg] opacity-38"
               />
               <LuminousInfinity
                 variant="corner"
                 sparkles={false}
-                className="absolute left-[-5rem] top-28 h-24 w-52 rotate-[9deg] opacity-35"
+                className="absolute left-[-5rem] top-28 h-24 w-52 rotate-[9deg] opacity-22"
               />
               <div className="relative flex min-h-[20rem] flex-col justify-end">
                 <p className="text-sm font-black uppercase tracking-[0.16em] text-crowd-brown">
@@ -496,7 +491,7 @@ export function ValuesBand() {
       <LuminousInfinity
         variant="partial"
         sparkles={false}
-        className="absolute left-[-16rem] top-1/2 hidden h-[24rem] w-[42rem] -translate-y-1/2 rotate-[-9deg] opacity-28 md:block"
+        className="absolute left-[-30rem] top-1/2 hidden h-[25rem] w-[58rem] -translate-y-1/2 rotate-[-8deg] opacity-32 md:block"
       />
       <div className="container-crowd">
         <div className="flex flex-col gap-5 border-b border-crowd-cream/15 pb-8 md:flex-row md:items-end md:justify-between">

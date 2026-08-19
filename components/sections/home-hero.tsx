@@ -25,12 +25,12 @@ export function HomeHero() {
       />
       <LuminousInfinity
         variant="hero"
-        className="absolute left-[-16rem] top-[38%] z-[1] h-[21rem] w-[44rem] -translate-y-1/2 rotate-[-6deg] opacity-70 sm:left-[-14rem] sm:top-[42%] sm:h-[26rem] sm:w-[54rem] md:left-[-10rem] md:top-[44%] lg:top-[48%]"
+        className="absolute left-[-23rem] top-[41%] z-[1] h-[21rem] w-[58rem] -translate-y-1/2 rotate-[-5deg] opacity-62 sm:left-[-21rem] sm:top-[44%] sm:h-[25rem] sm:w-[68rem] md:left-[-17rem] md:top-[46%] lg:top-[49%]"
       />
       <LuminousInfinity
-        variant="partial"
+        variant="streak"
         sparkles={false}
-        className="absolute bottom-10 right-[-12rem] z-[1] hidden h-[17rem] w-[38rem] rotate-[8deg] opacity-45 lg:block"
+        className="absolute bottom-12 right-[-10rem] z-[1] hidden h-[15rem] w-[38rem] rotate-[7deg] opacity-38 lg:block"
       />
 
       <div className="container-crowd relative z-20 flex min-h-[68svh] items-end py-10 sm:py-12 md:min-h-[70svh] md:py-14">

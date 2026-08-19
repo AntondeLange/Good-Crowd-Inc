@@ -55,7 +55,8 @@ Requirements:
 Current implementation:
 - `components/motion/infinity-journey.tsx` owns the page-level scroll-progress path.
 - `components/brand/luminous-infinity.tsx` provides reusable decorative SVG variants: `hero`, `background`, `partial`, `photo`, `corner`, `founder`, `footer` and `streak`.
-- The luminous treatment uses layered SVG strokes: a soft blurred glow, a wider amber/gold ambient stroke, a narrower metallic core and dashed champagne highlights, with only a few optional spark points.
+- The luminous treatment uses layered SVG strokes: a very soft atmospheric glow, a narrow amber/gold body, a fine champagne core/trace and dashed specular highlights, with only a few optional spark points.
+- Full infinity forms are reserved for selected high-value moments. Other variants use cropped loops, open trails or streaks so the page reads as one continuous light journey rather than repeated marks.
 - Gold values are derived from the Good Crowd palette: deep warm amber, rich metallic gold, pale champagne and tiny warm-ivory specular highlights.
 - Mobile treatment is quieter through lower CSS opacity and hidden spark points below the small-screen breakpoint.
 - The reusable motifs are static and decorative; only the existing page-level journey uses scroll progress, with `prefers-reduced-motion` resolving it to the complete static path.
