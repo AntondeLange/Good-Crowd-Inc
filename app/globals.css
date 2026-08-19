@@ -11,6 +11,10 @@
     --color-mist: #f8f8f8;
     --color-ink: #28150e;
     --color-focus: #c96822;
+    --color-gold-deep: #9a571f;
+    --color-gold: #d7a24b;
+    --color-champagne: #f3cf94;
+    --color-warm-ivory: #fff3d2;
     --surface-page: var(--color-cream);
     --surface-soft: var(--color-mist);
     --text-primary: var(--color-brown);
@@ -127,6 +131,93 @@
   --journey-progress: 1;
 }
 
+.luminous-infinity {
+  display: block;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.luminous-infinity__aura {
+  opacity: 0.3;
+}
+
+.luminous-infinity__ambient {
+  opacity: 0.22;
+}
+
+.luminous-infinity__main {
+  opacity: 0.72;
+}
+
+.luminous-infinity__highlight {
+  opacity: 0.82;
+}
+
+.luminous-infinity__spark {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 0.55rem color-mix(in srgb, var(--color-champagne) 70%, transparent));
+}
+
+.luminous-infinity--hero .luminous-infinity__aura {
+  opacity: 0.44;
+}
+
+.luminous-infinity--hero .luminous-infinity__ambient,
+.luminous-infinity--photo .luminous-infinity__ambient {
+  opacity: 0.34;
+}
+
+.luminous-infinity--hero .luminous-infinity__main,
+.luminous-infinity--photo .luminous-infinity__main {
+  opacity: 0.9;
+}
+
+.luminous-infinity--background .luminous-infinity__aura,
+.luminous-infinity--partial .luminous-infinity__aura,
+.luminous-infinity--footer .luminous-infinity__aura {
+  opacity: 0.18;
+}
+
+.luminous-infinity--background .luminous-infinity__main,
+.luminous-infinity--partial .luminous-infinity__main,
+.luminous-infinity--footer .luminous-infinity__main {
+  opacity: 0.48;
+}
+
+.luminous-infinity--corner .luminous-infinity__aura,
+.luminous-infinity--corner .luminous-infinity__ambient,
+.luminous-infinity--corner .luminous-infinity__highlight {
+  opacity: 0.14;
+}
+
+.luminous-infinity--corner .luminous-infinity__main {
+  opacity: 0.42;
+}
+
+.luminous-infinity--founder .luminous-infinity__aura {
+  opacity: 0.2;
+}
+
+.luminous-infinity--streak .luminous-infinity__aura {
+  opacity: 0.16;
+}
+
+.luminous-infinity--streak .luminous-infinity__ambient {
+  opacity: 0.2;
+}
+
+.luminous-infinity--streak .luminous-infinity__main {
+  opacity: 0.62;
+}
+
+.journey-path-base-glow {
+  opacity: 0.16;
+}
+
+.journey-path-base {
+  opacity: 0.22;
+}
+
 .home-page .container-crowd {
   position: relative;
   z-index: 2;
@@ -135,6 +226,23 @@
 .journey-path-progress {
   stroke-dasharray: 1;
   stroke-dashoffset: calc(1 - var(--journey-progress));
+}
+
+.journey-path-progress-glow {
+  opacity: 0.26;
+}
+
+.journey-path-progress-main {
+  opacity: 0.76;
+}
+
+.journey-path-progress-highlight {
+  opacity: 0.9;
+}
+
+.journey-spark {
+  opacity: 0.58;
+  filter: drop-shadow(0 0 0.65rem color-mix(in srgb, var(--color-champagne) 68%, transparent));
 }
 
 .pillar-card {
@@ -170,6 +278,49 @@
     linear-gradient(120deg, color-mix(in srgb, var(--color-brown) 92%, black) 0%, var(--color-brown) 44%, var(--color-earth) 100%),
     repeating-linear-gradient(90deg, color-mix(in srgb, var(--color-sand) 16%, transparent) 0 1px, transparent 1px 8px);
   background-blend-mode: normal, screen;
+}
+
+@media (max-width: 640px) {
+  .luminous-infinity__spark,
+  .journey-spark {
+    display: none;
+  }
+
+  .luminous-infinity__aura {
+    opacity: 0.16;
+  }
+
+  .luminous-infinity__ambient {
+    opacity: 0.16;
+  }
+
+  .luminous-infinity__main {
+    opacity: 0.46;
+  }
+
+  .luminous-infinity__highlight {
+    opacity: 0.58;
+  }
+
+  .journey-path-base-glow {
+    opacity: 0.08;
+  }
+
+  .journey-path-base {
+    opacity: 0.12;
+  }
+
+  .journey-path-progress-glow {
+    opacity: 0.1;
+  }
+
+  .journey-path-progress-main {
+    opacity: 0.38;
+  }
+
+  .journey-path-progress-highlight {
+    opacity: 0.5;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

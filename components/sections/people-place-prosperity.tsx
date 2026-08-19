@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LuminousInfinity } from "@/components/brand/luminous-infinity";
 import { pillars } from "@/lib/site-content";
 
 const PILLAR_MEDIA_ALIGNMENTS = [
@@ -93,8 +94,15 @@ function PillarMedia({ index }: { index: number }) {
       className={`absolute inset-0 flex ${PILLAR_MEDIA_ALIGNMENTS[index]} overflow-hidden bg-[linear-gradient(135deg,var(--color-brown),var(--color-earth))] p-6`}
     >
       <div className="absolute inset-x-0 bottom-0 h-20 bg-crowd-brown/40" />
-      <div className="absolute left-6 top-6 h-20 w-20 rounded-full border-[10px] border-crowd-sand/30" />
-      <div className="absolute right-[-2rem] top-10 h-32 w-56 rotate-[-8deg] rounded-[50%] border-[12px] border-crowd-cream/20" />
+      <LuminousInfinity
+        variant="photo"
+        className="absolute -right-16 top-4 h-36 w-72 -rotate-[7deg] opacity-65"
+      />
+      <LuminousInfinity
+        variant="corner"
+        sparkles={false}
+        className="absolute left-[-5rem] top-4 h-32 w-64 rotate-[12deg] opacity-45"
+      />
       <div className="relative flex items-end gap-3">
         {Array.from({ length: 4 + index }).map((_, markerIndex) => (
           <span

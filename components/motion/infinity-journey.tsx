@@ -2,6 +2,20 @@
 
 import { useEffect, useRef } from "react";
 
+const JOURNEY_PATH =
+  "M640 40 C900 180 940 440 650 540 C370 638 270 410 450 300 C650 178 878 314 840 540 C804 760 450 766 360 980 C270 1198 650 1286 820 1450 C1034 1654 884 1950 574 1918 C290 1888 210 1606 424 1492 C650 1372 940 1554 904 1840 C862 2184 312 2140 270 2470 C236 2748 782 2744 880 3070 C968 3368 530 3466 380 3206 C228 2944 690 2788 872 3028 C1062 3278 766 3688 470 3614 C248 3558 318 3284 548 3316 C854 3360 1000 3942 600 4056 C404 4112 250 3994 294 3822 C344 3628 754 3652 874 3934 C994 4216 724 4510 430 4618";
+
+const JOURNEY_SPARKS = [
+  { cx: 682, cy: 528, r: 5.2 },
+  { cx: 352, cy: 994, r: 3.8 },
+  { cx: 836, cy: 1452, r: 4.4 },
+  { cx: 914, cy: 1838, r: 3.2 },
+  { cx: 276, cy: 2472, r: 4.8 },
+  { cx: 868, cy: 3026, r: 3.6 },
+  { cx: 468, cy: 3614, r: 4.2 },
+  { cx: 596, cy: 4056, r: 5 },
+] as const;
+
 export function InfinityJourney() {
   const shellRef = useRef<HTMLDivElement>(null);
 
@@ -67,26 +81,125 @@ export function InfinityJourney() {
         className="absolute left-1/2 top-0 h-full w-[1320px] max-w-none -translate-x-1/2 opacity-90 md:w-full"
         focusable="false"
       >
+        <defs>
+          <linearGradient
+            id="journey-gold"
+            x1="220"
+            y1="90"
+            x2="1010"
+            y2="4560"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="var(--color-gold-deep)" />
+            <stop offset="0.18" stopColor="var(--color-champagne)" />
+            <stop offset="0.34" stopColor="var(--color-gold)" />
+            <stop offset="0.52" stopColor="var(--color-warm-ivory)" />
+            <stop offset="0.68" stopColor="var(--color-gold)" />
+            <stop offset="0.86" stopColor="var(--color-champagne)" />
+            <stop offset="1" stopColor="var(--color-earth)" />
+          </linearGradient>
+          <linearGradient
+            id="journey-glow"
+            x1="180"
+            y1="70"
+            x2="980"
+            y2="4600"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="var(--color-gold)" stopOpacity="0.12" />
+            <stop offset="0.5" stopColor="var(--color-champagne)" stopOpacity="0.7" />
+            <stop offset="1" stopColor="var(--color-gold-deep)" stopOpacity="0.18" />
+          </linearGradient>
+          <linearGradient
+            id="journey-highlight"
+            x1="300"
+            y1="120"
+            x2="900"
+            y2="4540"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="var(--color-champagne)" stopOpacity="0" />
+            <stop offset="0.28" stopColor="var(--color-warm-ivory)" stopOpacity="0.9" />
+            <stop offset="0.54" stopColor="var(--color-champagne)" stopOpacity="0.64" />
+            <stop offset="0.76" stopColor="var(--color-warm-ivory)" stopOpacity="0.84" />
+            <stop offset="1" stopColor="var(--color-gold)" stopOpacity="0" />
+          </linearGradient>
+          <radialGradient id="journey-spark">
+            <stop offset="0" stopColor="var(--color-warm-ivory)" />
+            <stop offset="0.55" stopColor="var(--color-champagne)" stopOpacity="0.76" />
+            <stop offset="1" stopColor="var(--color-gold)" stopOpacity="0" />
+          </radialGradient>
+          <filter
+            id="journey-light-blur"
+            x="-25%"
+            y="-4%"
+            width="150%"
+            height="108%"
+            colorInterpolationFilters="sRGB"
+          >
+            <feGaussianBlur stdDeviation="7" />
+          </filter>
+        </defs>
         <path
-          d="M640 40 C900 180 940 440 650 540 C370 638 270 410 450 300 C650 178 878 314 840 540 C804 760 450 766 360 980 C270 1198 650 1286 820 1450 C1034 1654 884 1950 574 1918 C290 1888 210 1606 424 1492 C650 1372 940 1554 904 1840 C862 2184 312 2140 270 2470 C236 2748 782 2744 880 3070 C968 3368 530 3466 380 3206 C228 2944 690 2788 872 3028 C1062 3278 766 3688 470 3614 C248 3558 318 3284 548 3316 C854 3360 1000 3942 600 4056 C404 4112 250 3994 294 3822 C344 3628 754 3652 874 3934 C994 4216 724 4510 430 4618"
+          className="journey-path-base-glow"
+          d={JOURNEY_PATH}
           fill="none"
-          stroke="var(--color-earth)"
+          stroke="url(#journey-glow)"
+          strokeLinecap="round"
+          strokeWidth="34"
+          filter="url(#journey-light-blur)"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path
+          className="journey-path-base"
+          d={JOURNEY_PATH}
+          fill="none"
+          stroke="url(#journey-gold)"
+          strokeLinecap="round"
+          strokeWidth="20"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path
+          className="journey-path-progress journey-path-progress-glow"
+          pathLength="1"
+          d={JOURNEY_PATH}
+          fill="none"
+          stroke="url(#journey-glow)"
           strokeLinecap="round"
           strokeWidth="24"
-          opacity="0.24"
+          filter="url(#journey-light-blur)"
           vectorEffect="non-scaling-stroke"
         />
         <path
-          className="journey-path-progress"
+          className="journey-path-progress journey-path-progress-main"
           pathLength="1"
-          d="M640 40 C900 180 940 440 650 540 C370 638 270 410 450 300 C650 178 878 314 840 540 C804 760 450 766 360 980 C270 1198 650 1286 820 1450 C1034 1654 884 1950 574 1918 C290 1888 210 1606 424 1492 C650 1372 940 1554 904 1840 C862 2184 312 2140 270 2470 C236 2748 782 2744 880 3070 C968 3368 530 3466 380 3206 C228 2944 690 2788 872 3028 C1062 3278 766 3688 470 3614 C248 3558 318 3284 548 3316 C854 3360 1000 3942 600 4056 C404 4112 250 3994 294 3822 C344 3628 754 3652 874 3934 C994 4216 724 4510 430 4618"
+          d={JOURNEY_PATH}
           fill="none"
-          stroke="var(--color-sand)"
+          stroke="url(#journey-gold)"
           strokeLinecap="round"
-          strokeWidth="10"
-          opacity="0.72"
+          strokeWidth="8.5"
           vectorEffect="non-scaling-stroke"
         />
+        <path
+          className="journey-path-progress journey-path-progress-highlight"
+          pathLength="1"
+          d={JOURNEY_PATH}
+          fill="none"
+          stroke="url(#journey-highlight)"
+          strokeLinecap="round"
+          strokeWidth="2.6"
+          vectorEffect="non-scaling-stroke"
+        />
+        {JOURNEY_SPARKS.map((spark) => (
+          <circle
+            key={`${spark.cx}-${spark.cy}`}
+            className="journey-spark"
+            cx={spark.cx}
+            cy={spark.cy}
+            r={spark.r}
+            fill="url(#journey-spark)"
+          />
+        ))}
       </svg>
     </div>
   );

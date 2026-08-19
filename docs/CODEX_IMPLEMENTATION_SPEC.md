@@ -52,6 +52,15 @@ Requirements:
 - prevent the line from interfering with text readability, controls or focus indication;
 - keep implementation modular so individual sections do not tightly depend on one giant client component.
 
+Current implementation:
+- `components/motion/infinity-journey.tsx` owns the page-level scroll-progress path.
+- `components/brand/luminous-infinity.tsx` provides reusable decorative SVG variants: `hero`, `background`, `partial`, `photo`, `corner`, `founder`, `footer` and `streak`.
+- The luminous treatment uses layered SVG strokes: a soft blurred glow, a wider amber/gold ambient stroke, a narrower metallic core and dashed champagne highlights, with only a few optional spark points.
+- Gold values are derived from the Good Crowd palette: deep warm amber, rich metallic gold, pale champagne and tiny warm-ivory specular highlights.
+- Mobile treatment is quieter through lower CSS opacity and hidden spark points below the small-screen breakpoint.
+- The reusable motifs are static and decorative; only the existing page-level journey uses scroll progress, with `prefers-reduced-motion` resolving it to the complete static path.
+- Decorative SVGs must remain `aria-hidden` and `pointer-events: none`.
+
 Treat this as the signature interaction, not one animation among dozens. Other motion should be quieter so the page remains coherent.
 
 ## Homepage scroll architecture

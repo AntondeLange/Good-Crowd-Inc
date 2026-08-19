@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { GoodCrowdLogo } from "@/components/brand/good-crowd-logo";
+import { LuminousInfinity } from "@/components/brand/luminous-infinity";
 import { ButtonLink } from "@/components/ui/button-link";
 import { homeHero } from "@/lib/site-content";
 
@@ -22,13 +23,14 @@ export function HomeHero() {
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 z-[1] h-1/2 bg-[linear-gradient(180deg,transparent,rgba(40,21,14,0.82))]"
       />
-      <div
-        aria-hidden="true"
-        className="absolute left-[-8rem] top-[18%] z-[1] h-[18rem] w-[32rem] rotate-[-8deg] rounded-[50%] border-[16px] border-crowd-sand/20 sm:h-[24rem] sm:w-[42rem]"
+      <LuminousInfinity
+        variant="hero"
+        className="absolute left-[-16rem] top-[38%] z-[1] h-[21rem] w-[44rem] -translate-y-1/2 rotate-[-6deg] opacity-70 sm:left-[-14rem] sm:top-[42%] sm:h-[26rem] sm:w-[54rem] md:left-[-10rem] md:top-[44%] lg:top-[48%]"
       />
-      <div
-        aria-hidden="true"
-        className="absolute bottom-16 right-[-7rem] z-[1] hidden h-[18rem] w-[34rem] rotate-[8deg] rounded-[50%] border border-crowd-cream/25 lg:block"
+      <LuminousInfinity
+        variant="partial"
+        sparkles={false}
+        className="absolute bottom-10 right-[-12rem] z-[1] hidden h-[17rem] w-[38rem] rotate-[8deg] opacity-45 lg:block"
       />
 
       <div className="container-crowd relative z-20 flex min-h-[68svh] items-end py-10 sm:py-12 md:min-h-[70svh] md:py-14">

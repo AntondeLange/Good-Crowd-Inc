@@ -1,18 +1,21 @@
 import Link from "next/link";
 import { GoodCrowdLogo } from "@/components/brand/good-crowd-logo";
+import { LuminousInfinity } from "@/components/brand/luminous-infinity";
 import { ButtonLink } from "@/components/ui/button-link";
 import { siteNav } from "@/lib/site-content";
 
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-crowd-brown py-14 text-crowd-cream md:py-20">
-      <div
-        aria-hidden="true"
-        className="absolute -right-28 top-8 h-72 w-72 rounded-full border border-crowd-sand/20 md:h-[28rem] md:w-[28rem]"
+      <LuminousInfinity
+        variant="footer"
+        sparkles={false}
+        className="absolute -right-40 top-4 h-72 w-[34rem] rotate-[13deg] opacity-32 md:h-[28rem] md:w-[52rem]"
       />
-      <div
-        aria-hidden="true"
-        className="absolute bottom-10 right-10 hidden h-32 w-64 rounded-[50%] border border-crowd-sand/20 md:block"
+      <LuminousInfinity
+        variant="streak"
+        sparkles={false}
+        className="absolute bottom-8 right-8 hidden h-28 w-72 -rotate-[4deg] opacity-38 md:block"
       />
 
       <div className="container-crowd relative grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-start">

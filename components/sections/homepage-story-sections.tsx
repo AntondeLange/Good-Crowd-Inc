@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LuminousInfinity } from "@/components/brand/luminous-infinity";
 import { ButtonLink } from "@/components/ui/button-link";
 import {
   approvedEventStories,
@@ -44,9 +45,10 @@ const preparedMetricFields = [
 export function MissionManifesto() {
   return (
     <section className="relative overflow-hidden bg-crowd-brown py-20 text-crowd-cream md:py-28">
-      <div
-        aria-hidden="true"
-        className="absolute -right-24 top-1/2 z-0 hidden h-72 w-[34rem] -translate-y-1/2 rounded-[50%] border-[22px] border-crowd-sand/10 md:block"
+      <LuminousInfinity
+        variant="background"
+        sparkles={false}
+        className="absolute -right-32 top-1/2 z-0 hidden h-72 w-[38rem] -translate-y-1/2 rotate-[5deg] opacity-38 md:block"
       />
       <div className="container-crowd relative z-10 grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
         <div className="relative isolate">
@@ -154,9 +156,9 @@ function EventMediaFrame({ media }: { media?: EventMedia }) {
           aria-hidden="true"
           className="absolute inset-0 bg-[linear-gradient(180deg,rgba(40,21,14,0.08),rgba(40,21,14,0.58))]"
         />
-        <div
-          aria-hidden="true"
-          className="absolute bottom-8 right-8 hidden h-24 w-56 rounded-[50%] border-[10px] border-crowd-sand/55 md:block"
+        <LuminousInfinity
+          variant="photo"
+          className="absolute bottom-6 right-5 hidden h-24 w-60 -rotate-[5deg] opacity-85 md:block"
         />
       </div>
     );
@@ -164,13 +166,14 @@ function EventMediaFrame({ media }: { media?: EventMedia }) {
 
   return (
     <div className="media-grain relative aspect-[16/9] overflow-hidden rounded-[2.5rem] p-6 text-crowd-cream shadow-crowd-lg">
-      <div
-        aria-hidden="true"
-        className="absolute left-8 top-8 z-0 hidden h-28 w-28 rounded-full border-[12px] border-crowd-sand/30 sm:block"
+      <LuminousInfinity
+        variant="photo"
+        className="absolute bottom-8 right-6 z-0 hidden h-24 w-56 -rotate-[7deg] opacity-70 sm:block"
       />
-      <div
-        aria-hidden="true"
-        className="absolute bottom-8 right-8 z-0 hidden h-20 w-48 rounded-[50%] border-[10px] border-crowd-sand/30 sm:block"
+      <LuminousInfinity
+        variant="corner"
+        sparkles={false}
+        className="absolute left-[-4rem] top-4 z-0 hidden h-28 w-56 rotate-[11deg] opacity-45 sm:block"
       />
       <div className="relative z-10 flex h-full flex-col justify-end">
         <div className="flex h-16 w-16 items-center justify-center rounded-full border border-crowd-cream/40 bg-crowd-cream/10 backdrop-blur-sm">
@@ -246,9 +249,10 @@ function EventStoryList({ stories }: { stories: EventStory[] }) {
 export function PartnerCommunitySection() {
   return (
     <section className="section-pad relative overflow-hidden bg-crowd-brown text-crowd-cream">
-      <div
-        aria-hidden="true"
-        className="absolute right-[-12rem] top-1/2 h-[30rem] w-[30rem] -translate-y-1/2 rounded-full border border-crowd-sand/15"
+      <LuminousInfinity
+        variant="partial"
+        sparkles={false}
+        className="absolute right-[-18rem] top-1/2 h-[24rem] w-[44rem] -translate-y-1/2 rotate-[10deg] opacity-28 md:h-[30rem] md:w-[54rem]"
       />
       <div className="container-crowd grid gap-10 lg:grid-cols-[1fr_18rem] lg:items-center">
         <div>
@@ -283,7 +287,11 @@ export function PartnerCommunitySection() {
           </div>
         ) : (
           <div className="hidden lg:block" aria-hidden="true">
-            <div className="h-80 rounded-full border border-crowd-sand/20" />
+            <LuminousInfinity
+              variant="background"
+              sparkles={false}
+              className="h-80 w-80 rotate-[18deg] opacity-45"
+            />
           </div>
         )}
       </div>
@@ -376,9 +384,9 @@ export function WorkWithUsSection() {
               aria-hidden="true"
               className="absolute inset-0 bg-[linear-gradient(180deg,rgba(40,21,14,0.08),rgba(40,21,14,0.64))]"
             />
-            <div
-              aria-hidden="true"
-              className="absolute bottom-8 left-8 h-28 w-56 rounded-[50%] border-[10px] border-crowd-sand/55"
+            <LuminousInfinity
+              variant="photo"
+              className="absolute bottom-7 left-5 h-28 w-64 rotate-[4deg] opacity-82"
             />
           </div>
 
@@ -394,10 +402,11 @@ export function WorkWithUsSection() {
                       : "bg-crowd-cream"
                 }`}
               >
-                <div
-                  aria-hidden="true"
-                  className={`absolute -right-12 -top-12 h-32 w-32 rounded-full border-[12px] transition duration-crowd ease-crowd group-hover:scale-110 group-focus-within:scale-110 ${
-                    index === 0 ? "border-crowd-sand/30" : "border-crowd-sand/60"
+                <LuminousInfinity
+                  variant="corner"
+                  sparkles={false}
+                  className={`absolute -right-24 -top-16 h-32 w-64 rotate-[18deg] transition duration-crowd ease-crowd group-hover:scale-105 group-focus-within:scale-105 ${
+                    index === 0 ? "opacity-38" : "opacity-48"
                   }`}
                 />
                 <p
@@ -456,13 +465,14 @@ export function FounderSection() {
                 index === 0 ? "sm:mt-10" : ""
               }`}
             >
-              <div
-                aria-hidden="true"
-                className="absolute left-1/2 top-10 h-44 w-32 -translate-x-1/2 rounded-[50%] border-[12px] border-crowd-sand bg-crowd-cream"
+              <LuminousInfinity
+                variant="founder"
+                className="absolute left-1/2 top-8 h-48 w-72 -translate-x-1/2 rotate-[-8deg] opacity-58"
               />
-              <div
-                aria-hidden="true"
-                className="absolute left-8 top-28 h-24 w-44 rounded-[50%] border border-crowd-earth/30"
+              <LuminousInfinity
+                variant="corner"
+                sparkles={false}
+                className="absolute left-[-5rem] top-28 h-24 w-52 rotate-[9deg] opacity-35"
               />
               <div className="relative flex min-h-[20rem] flex-col justify-end">
                 <p className="text-sm font-black uppercase tracking-[0.16em] text-crowd-brown">
@@ -483,9 +493,10 @@ export function FounderSection() {
 export function ValuesBand() {
   return (
     <section className="relative overflow-hidden bg-crowd-brown py-20 text-crowd-cream md:py-24">
-      <div
-        aria-hidden="true"
-        className="absolute left-[-12rem] top-1/2 hidden h-[26rem] w-[36rem] -translate-y-1/2 rounded-[50%] border border-crowd-sand/15 md:block"
+      <LuminousInfinity
+        variant="partial"
+        sparkles={false}
+        className="absolute left-[-16rem] top-1/2 hidden h-[24rem] w-[42rem] -translate-y-1/2 rotate-[-9deg] opacity-28 md:block"
       />
       <div className="container-crowd">
         <div className="flex flex-col gap-5 border-b border-crowd-cream/15 pb-8 md:flex-row md:items-end md:justify-between">
