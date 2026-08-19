@@ -3,11 +3,10 @@ import Image from "next/image";
 import { LuminousInfinity } from "@/components/brand/luminous-infinity";
 import {
   EditorialIntro,
-  PortraitPlaceholder,
   SecondaryHero,
   SectionMediaBlock,
 } from "@/components/sections/secondary-page-primitives";
-import { founders, missionVision, pillars, values } from "@/lib/site-content";
+import { boardMembers, missionVision, pillars, values } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -191,21 +190,51 @@ export default function AboutPage() {
       </section>
 
       <section className="section-pad bg-crowd-mist">
-        <div className="container-crowd grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div>
-            <p className="eyebrow text-crowd-brown">Founders</p>
-            <h2 className="display mt-4 text-4xl md:text-6xl">
-              Good Crowd was founded by Tamara de Lange and Sarah Moore.
-            </h2>
+        <div className="container-crowd">
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div>
+              <p className="eyebrow text-crowd-brown">Our Board</p>
+              <h2 className="display mt-4 text-4xl md:text-6xl">
+                Community leadership with regional purpose.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-lg leading-8 text-crowd-brown/75 lg:justify-self-end">
+              Good Crowd Inc. is governed by a volunteer Board bringing together
+              community, organisational and regional perspectives. Tamara de Lange
+              and Sarah Moore are the organisation&apos;s founders and continue to serve
+              as Board Members.
+            </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2">
-            {founders.map((founder, index) => (
-              <PortraitPlaceholder
-                key={founder.name}
-                name={founder.name}
-                role={founder.role}
-                index={index}
-              />
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {boardMembers.map((member) => (
+              <article
+                key={member.name}
+                className="group overflow-hidden rounded-[1.5rem] border border-crowd-brown/10 bg-crowd-cream shadow-crowd"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden bg-crowd-cream">
+                  <Image
+                    src={member.image.src}
+                    alt={member.image.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.015]"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-xl font-black tracking-tight text-crowd-brown">
+                    {member.name}
+                  </h3>
+                  <p className="mt-2 text-sm font-bold uppercase tracking-[0.14em] text-crowd-brown/65">
+                    {member.role}
+                  </p>
+                  {member.placeholder ? (
+                    <p className="mt-3 text-xs font-bold uppercase tracking-[0.12em] text-crowd-brown/45">
+                      Photo coming soon
+                    </p>
+                  ) : null}
+                </div>
+              </article>
             ))}
           </div>
         </div>
