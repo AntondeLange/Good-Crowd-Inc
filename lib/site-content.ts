@@ -71,6 +71,13 @@ export const workWithUsAudiences = [
   },
 ] as const;
 
+export const missionVision = {
+  mission:
+    "To gather good crowds in regional Australia through purposeful events and experiences that leave lasting pride, visibility and prosperity behind.",
+  vision:
+    "A future where the communities of regional Australia are no longer the best kept secret — they are the destination.",
+} as const;
+
 export const values = [
   {
     title: "Goodness",
@@ -96,6 +103,34 @@ export const storyCategories = [
   "Event Recaps",
   "Regional Discoveries",
   "Good Crowd News",
+] as const;
+
+export type StoryCategory = (typeof storyCategories)[number];
+export type PublishableStoryCategory = Exclude<StoryCategory, "All Stories">;
+
+export type GoodReadArticle = {
+  slug: string;
+  title: string;
+  category: PublishableStoryCategory;
+  excerpt: string;
+  region?: string;
+  publishedAt?: string;
+  heroImage?: {
+    src: string;
+    alt: string;
+  };
+};
+
+export const approvedGoodReads: GoodReadArticle[] = [];
+
+export const contactEnquiryOptions = [
+  "Community member",
+  "Volunteer",
+  "Local business",
+  "Council",
+  "Sponsor",
+  "Media",
+  "Other",
 ] as const;
 
 export type ImpactMetric = {
