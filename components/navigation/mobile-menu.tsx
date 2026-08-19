@@ -45,7 +45,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
         ref={buttonRef}
         type="button"
         aria-expanded={isOpen}
-        aria-controls="mobile-navigation"
+        aria-controls={isOpen ? "mobile-navigation" : undefined}
         className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-crowd-brown/20 bg-crowd-cream text-crowd-brown transition duration-crowd ease-crowd hover:bg-crowd-sand focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-crowd-focus"
         onClick={() => setIsOpen((open) => !open)}
       >
