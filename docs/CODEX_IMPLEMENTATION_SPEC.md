@@ -5,6 +5,11 @@ Create a production-quality public website for Good Crowd Inc that expresses the
 
 The site should feel deliberately designed rather than template-driven. Its signature interaction concept is **one continuous line connecting people, place and outcomes**: an infinity-derived visual journey that begins around the hero identity and progresses through the homepage as the visitor scrolls.
 
+PRIMARY CURRENT HOMEPAGE VISUAL DIRECTION:
+`docs/design/homepage-directionrev1.png`
+
+Use this as the qualitative reference for the current Home page visual fidelity. It supersedes the older `docs/design/homepage-direction.png`, which remains a secondary historical concept reference. Do not reproduce invented statistics, partner logos, article names, event names, dates, founder portraits or impact figures from concept images.
+
 ## Launch information architecture
 1. `/` — Home
 2. `/about` — About
@@ -46,6 +51,16 @@ Requirements:
 - provide a reduced-motion/static state;
 - prevent the line from interfering with text readability, controls or focus indication;
 - keep implementation modular so individual sections do not tightly depend on one giant client component.
+
+Current implementation:
+- `components/motion/infinity-journey.tsx` owns the page-level scroll-progress path.
+- `components/brand/luminous-infinity.tsx` provides reusable decorative SVG variants: `hero`, `background`, `partial`, `photo`, `corner`, `founder`, `footer` and `streak`.
+- The luminous treatment uses layered SVG strokes: a very soft atmospheric glow, a narrow amber/gold body, a fine champagne core/trace and dashed specular highlights, with only a few optional spark points.
+- Full infinity forms are reserved for selected high-value moments. Other variants use cropped loops, open trails or streaks so the page reads as one continuous light journey rather than repeated marks.
+- Gold values are derived from the Good Crowd palette: deep warm amber, rich metallic gold, pale champagne and tiny warm-ivory specular highlights.
+- Mobile treatment is quieter through lower CSS opacity and hidden spark points below the small-screen breakpoint.
+- The reusable motifs are static and decorative; only the existing page-level journey uses scroll progress, with `prefers-reduced-motion` resolving it to the complete static path.
+- Decorative SVGs must remain `aria-hidden` and `pointer-events: none`.
 
 Treat this as the signature interaction, not one animation among dozens. Other motion should be quieter so the page remains coherent.
 

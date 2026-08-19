@@ -235,7 +235,12 @@ Requirements:
 - test performance on mid-range mobile hardware, not only desktop.
 
 ## Visual direction image
-If `docs/design/homepage-direction.png` is present, treat it as concept direction only. It is not a pixel-perfect specification and may contain generated imagery or illustrative decisions that are not approved production content. Brand rules and approved copy remain authoritative.
+PRIMARY CURRENT HOMEPAGE VISUAL DIRECTION:
+`docs/design/homepage-directionrev1.png`
+
+This supersedes the older `docs/design/homepage-direction.png` for qualitative homepage composition, image prominence, editorial density, dark/light rhythm, infinity-line treatment and overall visual richness.
+
+Treat both files as concept direction only. They are not pixel-perfect specifications and may contain generated imagery, illustrative decisions or invented factual content that is not approved production content. Brand rules and approved copy remain authoritative.
 
 ## Accessibility and quality
 The visual system must support WCAG 2.2 AA, visible keyboard focus, semantic structure, readable line lengths, sufficient contrast, touch-friendly controls and reduced-motion behaviour. A visually expressive result is not an excuse for inaccessible interaction.

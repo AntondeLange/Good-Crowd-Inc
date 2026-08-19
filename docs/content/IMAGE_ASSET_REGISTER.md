@@ -1,27 +1,33 @@
 # Good Crowd Inc — Website Image Asset Register
 
-These images are approved for website design use as illustrative/concept imagery.
+These files are approved for website design use when paired with accurate, source-supported copy. The register is authoritative for repository image paths, current dimensions, provenance and content-integrity constraints.
 
-**Important:** Do not present them as documentary evidence of an actual completed Good Crowd event, attendance level, partner relationship, or measured outcome unless separately verified.
+**Important:** Do not present any image as documentary evidence of a completed Good Crowd event, attendance level, partner relationship, sponsor relationship, testimonial or measured outcome unless that claim is separately verified.
 
-| File | Description | Dimensions | Publication note |
-|---|---|---:|---|
-| `public/images/community/community-market-branded.jpeg` | Community market / festival crowd with Good Crowd branding | 1536x1024 | Illustrative/concept imagery |
-| `public/images/events/live-music-stage-branded.jpeg` | Outdoor live music stage and seated crowd with Good Crowd branding | 1536x1024 | Illustrative/concept imagery |
-| `public/images/events/regional-show-crowd-branded.jpeg` | Large regional show / fair crowd with Good Crowd branding | 1536x1024 | Illustrative/concept imagery |
-| `public/images/events/garden-event-dining-branded.jpeg` | Styled outdoor dining event with Good Crowd branding | 1535x1024 | Illustrative/concept imagery |
-| `public/images/hero/community-festival-lawn-branded.jpeg` | Open lawn community festival with Good Crowd branding | 1536x1022 | Illustrative/concept imagery |
-| `public/images/events/urban-festival-overview-branded.jpeg` | Overhead urban festival crowd with Good Crowd branding | 1086x1448 | Illustrative/concept imagery |
-| `public/images/place/canola-field-festival-branded.jpeg` | Regional festival beside canola field with Good Crowd branding | 1536x1024 | Illustrative/concept imagery |
+## Consolidated Register
 
-## Suggested usage
+| Repository path | Description | Dimensions | Category | Source / credit | Provenance type | Recommended website use | Publication / content-integrity note |
+|---|---|---:|---|---|---|---|---|
+| `public/images/hero/community-festival-lawn-branded.jpeg` | Open lawn community festival with Good Crowd branding | 1536x1022 | Hero / community event | Supplied Good Crowd-branded concept imagery | Good Crowd-branded concept imagery | Primary Home hero image | Illustrative brand/event imagery only; do not imply a specific completed event, attendance count or measured impact. |
+| `public/images/community/community-market-branded.jpeg` | Community market / festival crowd with Good Crowd branding | 1536x1024 | People / community | Supplied Good Crowd-branded concept imagery | Good Crowd-branded concept imagery | People pillar card or community editorial section | Illustrative brand/community imagery only; do not identify depicted people as actual Good Crowd attendees unless verified. |
+| `public/images/place/canola-field-treeline.jpeg` | Canola field with mature treeline under overcast sky | 1536x1023 | Place / regional landscape | Chris Stenger / Unsplash | Third-party/source photography | Place pillar card or regional context image | Regional source photography; do not add Good Crowd branding or describe as a Good Crowd event location unless separately verified. |
+| `public/images/events/garden-event-dining-branded.jpeg` | Styled outdoor dining event with Good Crowd branding | 1535x1024 | Prosperity / hospitality / participation | Supplied Good Crowd-branded concept imagery | Good Crowd-branded concept imagery | Prosperity pillar card or Work With Us support image | Illustrative brand/event imagery only; do not imply revenue, supplier spend, attendance or other measured economic results. |
+| `public/images/events/live-music-stage-branded.jpeg` | Outdoor live music stage and seated crowd with Good Crowd branding | 1536x1024 | Event media / community gathering | Supplied Good Crowd-branded concept imagery | Good Crowd-branded concept imagery | Static event-media poster until approved video exists | Illustrative brand/event imagery only; do not present as a playable video or specific event record. |
+| `public/images/events/regional-show-crowd-branded.jpeg` | Large regional show / fair crowd with Good Crowd branding | 1536x1024 | Events / participation | Supplied Good Crowd-branded concept imagery | Good Crowd-branded concept imagery | Supporting event-energy image | Illustrative brand/event imagery only; do not imply confirmed crowd size or actual Good Crowd event delivery. |
+| `public/images/events/urban-festival-overview-branded.jpeg` | Overhead urban festival crowd with Good Crowd branding | 1086x1448 | Events / crowd overview | Supplied Good Crowd-branded concept imagery | Good Crowd-branded concept imagery | Secondary event or community support image | Illustrative brand/event imagery only; use carefully because the urban setting may be less regionally specific. |
+| `public/images/place/canola-field-festival-branded.jpeg` | Regional festival beside canola field with Good Crowd branding | 1536x1024 | Place / branded regional event | Supplied Good Crowd-branded concept imagery | Good Crowd-branded concept imagery | Regional event support image where a branded concept image is appropriate | Illustrative brand/event imagery only; do not describe as a real delivered Good Crowd event. |
+| `public/images/events/regional-agricultural-show.jpeg` | Regional agricultural show with spectators and livestock ring | 1536x1024 | Events / regional community / agriculture | Haydon / Unsplash | Third-party/source photography | General regional event context | Source photography; do not describe the show, attendees or organisers as Good Crowd unless separately verified. |
+| `public/images/place/canola-field-farm-dam-aerial.jpeg` | Aerial canola landscape with farm dam | 1536x1150 | Place / agriculture | Loic Leray / Unsplash | Third-party/source photography | Regional landscape or agriculture editorial support | Source photography; do not add Good Crowd branding or imply ownership/operation by Good Crowd. |
+| `public/images/place/broadacre-farmland-aerial.jpeg` | Aerial broadacre farmland and agricultural landscape | 1536x975 | Place / regional economy | Loic Leray / Unsplash | Third-party/source photography | Economic/regional context or section transition | Source photography; do not pair with unsupported economic-impact claims. |
+| `public/images/place/canola-field-close-landscape.jpeg` | Canola field landscape with foreground flowers and blue sky | 1536x1020 | Place / regional landscape | Loic Leray / Unsplash | Third-party/source photography | Place support image or Good Reads editorial teaser | Source photography; do not describe as a Good Crowd location unless verified. |
+| `public/images/place/green-cropping-landscape.jpeg` | Expansive green cropping landscape beneath cloudy sky | 1536x1151 | Place / agriculture | Loic Leray / Unsplash | Third-party/source photography | Quiet background, transition image or regional storytelling | Source photography; keep copy general and factual. |
+| `public/images/events/regional-festival-camping.jpeg` | Festival camping tents in an open agricultural landscape | 1536x1024 | Events / regional community / atmosphere | Max Langelott / Unsplash | Third-party/source photography | Festival/camping support image | Source photography; do not describe as a Good Crowd event or attendee campsite unless verified. |
+| `public/images/events/regional-festival-camping-at-dusk.jpeg` | Regional festival/camping site at dusk | 1536x614 | Events / regional community / atmosphere | Not recorded in supplied Batch 2 register; confirm before publication | Third-party/source photography | Optional atmospheric event-media fallback after source/licence confirmation | Source and licence need confirmation before publication; do not describe as a Good Crowd event. |
+| `public/images/place/sheep-grazing-regional-landscape.jpeg` | Sheep grazing across rolling regional pasture | 1536x1024 | Place / agriculture | Rachel Kucera / Unsplash | Third-party/source photography | Regional agriculture/community storytelling | Source photography; do not imply Good Crowd involvement with the depicted property or flock. |
+| `public/images/place/sheep-flock-pasture.jpeg` | Sheep flock in regional pasture with mature trees | 1536x1024 | Place / agriculture | Rachel Kucera / Unsplash | Third-party/source photography | Regional agriculture/community storytelling | Source photography; keep any accompanying claims broad and source-supported. |
 
-- `hero/community-festival-lawn-branded.jpeg`: strongest current homepage hero candidate.
-- `place/canola-field-festival-branded.jpeg`: strong regional/place imagery.
-- `events/live-music-stage-branded.jpeg`: event motion/video poster or event-story visual.
-- `community/community-market-branded.jpeg`: People/community card or editorial section.
-- Remaining images: supporting event/gallery/section imagery.
+## Content Integrity
 
-## Content integrity
-
-Avoid pairing these images with fabricated event names, dates, attendance figures, economic-impact claims, sponsor/partner claims, or testimonials.
+- Good Crowd-branded concept imagery may express brand, event or community atmosphere, but it is not evidence of completed events or measured impact.
+- Third-party/source photography must not be branded, renamed or described as depicting Good Crowd events, attendees, partners or outcomes.
+- Do not add invented event names, dates, article titles, founder portraits, statistics, partner logos, councils, testimonials or impact figures when using these images.

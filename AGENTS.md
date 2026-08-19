@@ -7,10 +7,15 @@ Before implementing or redesigning the website, read:
 3. `docs/content/WEBSITE_COPY.md`
 4. `docs/brand/BRAND_GUIDE.md`
 5. `docs/context/ORGANISATIONAL_CONTEXT.md`
-6. `docs/design/homepage-direction.png` if present
+6. `docs/design/homepage-directionrev1.png` if present, with `docs/design/homepage-direction.png` as older secondary reference
 7. approved assets under `public/brand` and `public/images`
 
 Treat the copy and brand documents as source-of-truth repository guidance. Use the organisational context document to distinguish public facts from internal strategy, future targets and governance material. The visual direction image is concept direction only and must not override approved copy or brand rules.
+
+PRIMARY CURRENT HOMEPAGE VISUAL DIRECTION:
+`docs/design/homepage-directionrev1.png`
+
+This supersedes the older `docs/design/homepage-direction.png` for qualitative homepage composition, image prominence, section rhythm and overall visual richness. Do not copy factual content from either concept image.
 
 ## Project intent
 Build and maintain the official Good Crowd Inc website from the approved website brief, copy and brand system. Do not invent claims, impact statistics, partner names, event data, contact details or downloadable collateral.
@@ -66,3 +71,13 @@ For significant tasks:
 5. report files changed, commands/checks run, unresolved issues and recommended next step.
 
 The first design milestone is a production-quality Home page and global design system, not five partially redesigned pages.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
