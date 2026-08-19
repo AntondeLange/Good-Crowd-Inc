@@ -210,7 +210,8 @@ export default function AboutPage() {
             {boardMembers.map((member) => (
               <article
                 key={member.name}
-                className="group overflow-hidden rounded-[1.5rem] border border-crowd-brown/10 bg-crowd-cream shadow-crowd"
+                tabIndex={0}
+                className="group overflow-hidden rounded-[1.5rem] border border-crowd-brown/10 bg-crowd-cream shadow-crowd focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-crowd-focus"
               >
                 <div className="relative aspect-[4/5] overflow-hidden bg-crowd-cream">
                   <Image
@@ -218,7 +219,7 @@ export default function AboutPage() {
                     alt={member.image.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.015]"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.015] group-focus-visible:scale-[1.015]"
                   />
                 </div>
                 <div className="p-5">
