@@ -97,7 +97,9 @@ export function MobileMenu({ links }: MobileMenuProps) {
             </ul>
           </nav>
         </div>
-      ) : null}
+      ) : (
+        <div id="mobile-navigation" hidden />
+      )}
     </div>
   );
 }
