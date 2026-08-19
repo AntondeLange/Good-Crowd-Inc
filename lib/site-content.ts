@@ -29,14 +29,26 @@ export const pillars: readonly Pillar[] = [
   {
     title: "People",
     copy: "Good Crowd creates moments that bring communities together, building connection, pride and a genuine sense of belonging.",
+    image: {
+      src: "/images/community/community-market-branded.jpeg",
+      alt: "A Good Crowd-branded community market scene with stalls and visitors.",
+    },
   },
   {
     title: "Place",
     copy: "Good Crowd celebrates what makes regional places extraordinary and helps put regional areas on the map for visitors and locals alike.",
+    image: {
+      src: "/images/place/canola-field-treeline.jpeg",
+      alt: "A canola field and mature treeline in a regional landscape.",
+    },
   },
   {
     title: "Prosperity",
     copy: "Good Crowd designs events that direct economic energy into local businesses, producers and makers.",
+    image: {
+      src: "/images/events/garden-event-dining-branded.jpeg",
+      alt: "A Good Crowd-branded outdoor dining event setting with tables under lights.",
+    },
   },
 ];
 

@@ -13,11 +13,7 @@ export function SiteHeader() {
           className="block rounded-xl focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-crowd-focus"
           aria-label="Good Crowd Inc home"
         >
-          <GoodCrowdLogo
-            variant="onLight"
-            priority
-            className="h-16 w-16 md:h-20 md:w-20"
-          />
+          <GoodCrowdLogo variant="onLight" className="h-16 w-16 md:h-20 md:w-20" />
         </Link>
 
         <nav

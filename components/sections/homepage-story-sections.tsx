@@ -17,7 +17,20 @@ type EventMedia = {
   label: string;
 };
 
-const eventMedia: EventMedia | undefined = undefined;
+const eventMedia: EventMedia = {
+  posterSrc: "/images/events/live-music-stage-branded.jpeg",
+  label: "A Good Crowd-branded outdoor live music stage with seated attendees.",
+};
+
+const GOOD_READS_IMAGE = {
+  src: "/images/place/canola-field-close-landscape.jpeg",
+  alt: "A canola field in a regional landscape.",
+} as const;
+
+const WORK_WITH_US_IMAGE = {
+  src: "/images/events/garden-event-dining-branded.jpeg",
+  alt: "A Good Crowd-branded outdoor dining event setting with tables under lights.",
+} as const;
 
 const preparedMetricFields = [
   "Measured attendance",
@@ -64,7 +77,7 @@ export function StoryTeaser() {
     <section className="section-pad bg-crowd-cream">
       <div className="container-crowd grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div>
-          <p className="eyebrow text-crowd-earth">Our story</p>
+          <p className="eyebrow text-crowd-brown">Our story</p>
           <h2 className="display mt-4 text-5xl md:text-6xl">
             Every community has a good crowd.
           </h2>
@@ -94,7 +107,7 @@ export function EventMotionReel() {
       <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-crowd-cream to-transparent" />
       <div className="container-crowd grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
         <div>
-          <p className="eyebrow text-crowd-earth">Event motion</p>
+          <p className="eyebrow text-crowd-brown">Event motion</p>
           <h2 className="display mt-4 text-5xl md:text-6xl">
             Events should feel alive before the first frame plays.
           </h2>
@@ -129,13 +142,21 @@ function EventMediaFrame({ media }: { media?: EventMedia }) {
 
   if (media?.posterSrc) {
     return (
-      <div className="relative aspect-[16/10] overflow-hidden rounded-crowd shadow-crowd-lg">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-[2.5rem] bg-crowd-brown shadow-crowd-lg">
         <Image
           src={media.posterSrc}
           alt={media.label}
           fill
           sizes="(max-width: 1024px) 100vw, 58vw"
-          className="object-cover"
+          className="object-cover object-[center_58%]"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(40,21,14,0.08),rgba(40,21,14,0.58))]"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute bottom-8 right-8 hidden h-24 w-56 rounded-[50%] border-[10px] border-crowd-sand/55 md:block"
         />
       </div>
     );
@@ -174,7 +195,7 @@ export function EventStoryArchitecture() {
       <div className="container-crowd">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
-            <p className="eyebrow text-crowd-earth">Event stories</p>
+            <p className="eyebrow text-crowd-brown">Event stories</p>
             <h2 className="display mt-4 text-5xl md:text-6xl">
               Impact belongs with evidence.
             </h2>
@@ -213,7 +234,7 @@ function EventStoryList({ stories }: { stories: EventStory[] }) {
     <div className="mt-8 grid gap-4">
       {stories.map((story) => (
         <article key={story.slug} className="rounded-[1.25rem] bg-crowd-cream p-5">
-          <p className="text-sm font-bold text-crowd-earth">{story.category}</p>
+          <p className="text-sm font-bold text-crowd-brown">{story.category}</p>
           <h3 className="mt-2 text-2xl font-black">{story.title}</h3>
           <p className="mt-3 text-crowd-brown/75">{story.excerpt}</p>
         </article>
@@ -276,7 +297,7 @@ export function GoodReadsSection() {
       <div className="container-crowd">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="eyebrow text-crowd-earth">Good Reads</p>
+            <p className="eyebrow text-crowd-brown">Good Reads</p>
             <h2 className="display mt-4 text-5xl md:text-6xl">
               Stories from communities, events and regional discoveries.
             </h2>
@@ -295,14 +316,30 @@ export function GoodReadsSection() {
           </div>
         </div>
 
-        <div className="mt-10 rounded-crowd border border-crowd-brown/10 bg-crowd-mist p-6 shadow-crowd md:p-8">
-          <p className="max-w-3xl text-lg leading-8 text-crowd-brown/75">
-            Good Reads is shaped for community profiles, event recaps, regional
-            discoveries and Good Crowd news.
-          </p>
-          <ButtonLink href="/stories" variant="secondary" className="mt-7">
-            Visit Good Reads
-          </ButtonLink>
+        <div className="mt-10 grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
+          <div className="relative min-h-[20rem] overflow-hidden rounded-[2rem] bg-crowd-brown shadow-crowd-lg lg:min-h-[25rem]">
+            <Image
+              src={GOOD_READS_IMAGE.src}
+              alt={GOOD_READS_IMAGE.alt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              className="object-cover object-[center_58%]"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-[linear-gradient(180deg,rgba(96,46,23,0.04),rgba(40,21,14,0.34))]"
+            />
+          </div>
+
+          <div className="flex flex-col justify-end rounded-crowd border border-crowd-brown/10 bg-crowd-mist p-6 shadow-crowd md:p-8">
+            <p className="max-w-3xl text-lg leading-8 text-crowd-brown/75">
+              Good Reads is shaped for community profiles, event recaps, regional
+              discoveries and Good Crowd news.
+            </p>
+            <ButtonLink href="/stories" variant="secondary" className="mt-7 self-start">
+              Visit Good Reads
+            </ButtonLink>
+          </div>
         </div>
       </div>
     </section>
@@ -315,7 +352,7 @@ export function WorkWithUsSection() {
       <div className="container-crowd">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="eyebrow text-crowd-earth">Work with us</p>
+            <p className="eyebrow text-crowd-brown">Work with us</p>
             <h2 className="display mt-4 text-5xl md:text-6xl">
               Good things happen when good people work together.
             </h2>
@@ -326,53 +363,73 @@ export function WorkWithUsSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:auto-rows-fr">
-          {workWithUsAudiences.map((audience, index) => (
-            <article
-              key={audience.title}
-              className={`group relative overflow-hidden rounded-[1.5rem] border border-crowd-brown/10 p-6 shadow-crowd transition duration-crowd ease-crowd hover:-translate-y-1 hover:shadow-crowd-lg focus-within:-translate-y-1 focus-within:shadow-crowd-lg ${
-                index === 0
-                  ? "bg-crowd-brown text-crowd-cream md:row-span-2 md:p-8"
-                  : index === 2
-                    ? "bg-crowd-mist"
-                    : "bg-crowd-cream"
-              }`}
-            >
-              <div
-                aria-hidden="true"
-                className={`absolute -right-12 -top-12 h-32 w-32 rounded-full border-[12px] transition duration-crowd ease-crowd group-hover:scale-110 group-focus-within:scale-110 ${
-                  index === 0 ? "border-crowd-sand/30" : "border-crowd-sand/60"
-                }`}
-              />
-              <p
-                className={`relative text-sm font-black ${
-                  index === 0 ? "text-crowd-sand" : "text-crowd-earth"
-                }`}
-              >
-                0{index + 1}
-              </p>
-              <h3 className="relative mt-12 text-2xl font-black tracking-tight md:mt-16">
-                {audience.title}
-              </h3>
-              <p
-                className={`relative mt-4 leading-7 ${
-                  index === 0 ? "text-crowd-cream/75" : "text-crowd-brown/75"
-                }`}
-              >
-                {audience.copy}
-              </p>
-              <Link
-                href="/contact"
-                className={`relative mt-6 inline-flex rounded-full text-sm font-black underline underline-offset-4 transition duration-crowd ease-crowd focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-crowd-focus ${
+        <div className="mt-12 grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
+          <div className="relative min-h-[22rem] overflow-hidden rounded-[2rem] bg-crowd-brown shadow-crowd-lg md:min-h-[30rem]">
+            <Image
+              src={WORK_WITH_US_IMAGE.src}
+              alt={WORK_WITH_US_IMAGE.alt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 38vw"
+              className="object-cover object-[center_54%]"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-[linear-gradient(180deg,rgba(40,21,14,0.08),rgba(40,21,14,0.64))]"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute bottom-8 left-8 h-28 w-56 rounded-[50%] border-[10px] border-crowd-sand/55"
+            />
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:auto-rows-fr">
+            {workWithUsAudiences.map((audience, index) => (
+              <article
+                key={audience.title}
+                className={`group relative overflow-hidden rounded-[1.5rem] border border-crowd-brown/10 p-6 shadow-crowd transition duration-crowd ease-crowd hover:-translate-y-1 hover:shadow-crowd-lg focus-within:-translate-y-1 focus-within:shadow-crowd-lg ${
                   index === 0
-                    ? "text-crowd-sand decoration-crowd-sand/50 hover:decoration-crowd-cream"
-                    : "text-crowd-brown decoration-crowd-earth/40 hover:decoration-crowd-brown"
+                    ? "bg-crowd-brown text-crowd-cream md:row-span-2 md:p-8"
+                    : index === 2
+                      ? "bg-crowd-mist"
+                      : "bg-crowd-cream"
                 }`}
               >
-                Start the conversation
-              </Link>
-            </article>
-          ))}
+                <div
+                  aria-hidden="true"
+                  className={`absolute -right-12 -top-12 h-32 w-32 rounded-full border-[12px] transition duration-crowd ease-crowd group-hover:scale-110 group-focus-within:scale-110 ${
+                    index === 0 ? "border-crowd-sand/30" : "border-crowd-sand/60"
+                  }`}
+                />
+                <p
+                  className={`relative text-sm font-black ${
+                    index === 0 ? "text-crowd-sand" : "text-crowd-brown"
+                  }`}
+                >
+                  0{index + 1}
+                </p>
+                <h3 className="relative mt-12 text-2xl font-black tracking-tight md:mt-16">
+                  {audience.title}
+                </h3>
+                <p
+                  className={`relative mt-4 leading-7 ${
+                    index === 0 ? "text-crowd-cream/75" : "text-crowd-brown/75"
+                  }`}
+                >
+                  {audience.copy}
+                </p>
+                <Link
+                  href="/contact"
+                  className={`relative mt-6 inline-flex rounded-full text-sm font-black underline underline-offset-4 transition duration-crowd ease-crowd focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-crowd-focus ${
+                    index === 0
+                      ? "text-crowd-sand decoration-crowd-sand/50 hover:decoration-crowd-cream"
+                      : "text-crowd-brown decoration-crowd-earth/40 hover:decoration-crowd-brown"
+                  }`}
+                >
+                  Start the conversation
+                </Link>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -384,7 +441,7 @@ export function FounderSection() {
     <section className="section-pad bg-crowd-cream">
       <div className="container-crowd grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <div>
-          <p className="eyebrow text-crowd-earth">Founders</p>
+          <p className="eyebrow text-crowd-brown">Founders</p>
           <h2 className="display mt-4 text-5xl md:text-6xl">
             Good Crowd was founded by Tamara de Lange and Sarah Moore.
           </h2>
@@ -408,7 +465,7 @@ export function FounderSection() {
                 className="absolute left-8 top-28 h-24 w-44 rounded-[50%] border border-crowd-earth/30"
               />
               <div className="relative flex min-h-[20rem] flex-col justify-end">
-                <p className="text-sm font-black uppercase tracking-[0.16em] text-crowd-earth">
+                <p className="text-sm font-black uppercase tracking-[0.16em] text-crowd-brown">
                   {founder.role}
                 </p>
                 <h3 className="mt-2 text-3xl font-black tracking-tight">
