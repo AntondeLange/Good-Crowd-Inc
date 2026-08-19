@@ -20,7 +20,7 @@ For website implementation use this practical precedence:
 2. Public website wording: `docs/content/WEBSITE_COPY.md` and specifically approved website copy.
 3. Brand expression: `docs/brand/BRAND_GUIDE.md` and supplied approved brand assets.
 4. Organisational strategy/context: Business Plan and Board Introduction Pack.
-5. Concept imagery: `docs/design/homepage-direction.png` — visual direction only.
+5. Concept imagery: `docs/design/homepage-directionrev1.png` — primary current homepage visual direction only; `docs/design/homepage-direction.png` is retained as an older reference.
 
 A higher-precedence source does not automatically authorise publication of confidential/internal information.
 
@@ -197,7 +197,7 @@ Before making substantive content or design decisions, Codex should read:
 3. `docs/content/WEBSITE_COPY.md`
 4. `docs/brand/BRAND_GUIDE.md`
 5. `docs/context/ORGANISATIONAL_CONTEXT.md`
-6. `docs/design/homepage-direction.png` if present
+6. `docs/design/homepage-directionrev1.png` if present, with `docs/design/homepage-direction.png` as older secondary reference
 7. approved production assets under `public/brand` and `public/images`
 
 When a desired website statement is not supported by these sources, leave it out or flag it for approval. Do not fill gaps with plausible marketing language presented as organisational fact.

@@ -5,6 +5,11 @@ Create a production-quality public website for Good Crowd Inc that expresses the
 
 The site should feel deliberately designed rather than template-driven. Its signature interaction concept is **one continuous line connecting people, place and outcomes**: an infinity-derived visual journey that begins around the hero identity and progresses through the homepage as the visitor scrolls.
 
+PRIMARY CURRENT HOMEPAGE VISUAL DIRECTION:
+`docs/design/homepage-directionrev1.png`
+
+Use this as the qualitative reference for the current Home page visual fidelity. It supersedes the older `docs/design/homepage-direction.png`, which remains a secondary historical concept reference. Do not reproduce invented statistics, partner logos, article names, event names, dates, founder portraits or impact figures from concept images.
+
 ## Launch information architecture
 1. `/` — Home
 2. `/about` — About
