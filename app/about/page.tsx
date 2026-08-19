@@ -197,11 +197,6 @@ export default function AboutPage() {
             <h2 className="display mt-4 text-4xl md:text-6xl">
               Good Crowd was founded by Tamara de Lange and Sarah Moore.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-crowd-brown/75">
-              Public portraits and biographies have not yet been approved for
-              publication, so this section is structured for future source material
-              without inventing profile details.
-            </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {founders.map((founder, index) => (
