@@ -15,7 +15,7 @@ const contactPathways = [
   },
   {
     title: "Sponsors and corporate partners",
-    copy: "For values-aligned partnership conversations once approved sponsorship material is available.",
+    copy: "For values-aligned partnership and sponsorship conversations.",
   },
   {
     title: "Tourism and government bodies",
@@ -23,7 +23,7 @@ const contactPathways = [
   },
   {
     title: "Community, media and participation",
-    copy: "For community interest, media enquiries or future event participation conversations.",
+    copy: "For community interest, media enquiries or event participation conversations.",
   },
 ] as const;
 
@@ -50,10 +50,7 @@ export default function ContactPage() {
               Tell us who you are and what you want to explore.
             </h2>
             <p className="mt-6 text-lg leading-8 text-crowd-brown/75">
-              The form is designed with semantic labels, keyboard access and clear
-              validation. Delivery is intentionally not connected until recipient
-              mailbox, server-side validation, spam protection and privacy wording
-              are confirmed.
+              Whether you represent a region, organisation, business, community or media outlet, tell us what you have in mind and how Good Crowd may be able to help.
             </p>
           </div>
           <ContactForm />
@@ -105,9 +102,9 @@ export default function ContactPage() {
       </section>
 
       <PageCta
-        eyebrow="Privacy workflow"
-        title="Privacy wording is a launch dependency."
-        body="The site is structured for a privacy link and live delivery workflow, but no privacy policy or operational recipient address is published until approved."
+        eyebrow="Work with us"
+        title="Good conversations are a good place to start."
+        body="Explore the ways councils, tourism bodies, sponsors, community organisations, suppliers and event partners can work with Good Crowd."
         href="/work-with-us"
         label="View partnership paths"
       />
