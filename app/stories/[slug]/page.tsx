@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import { approvedGoodReads } from "@/lib/site-content";
 
 type StoryPageProps = {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 };
 
 function findArticle(slug: string) {
