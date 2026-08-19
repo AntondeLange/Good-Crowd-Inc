@@ -253,9 +253,6 @@ export function PortraitPlaceholder({ name, role, index }: PortraitPlaceholderPr
           {role}
         </p>
         <h3 className="mt-2 text-3xl font-black tracking-tight">{name}</h3>
-        <p className="mt-4 text-sm leading-6 text-crowd-brown/65">
-          Portrait and public biography pending approved source material.
-        </p>
       </div>
     </article>
   );
@@ -279,14 +276,12 @@ export function ArticleGrid({ articles }: ArticleGridProps) {
           />
         </div>
         <div className="flex flex-col justify-end rounded-crowd border border-crowd-brown/10 bg-crowd-mist p-6 shadow-crowd md:p-8">
-          <p className="eyebrow text-crowd-brown">Publication-ready</p>
-          <h2 className="mt-4 max-w-xl text-3xl font-black tracking-tight md:text-5xl">
-            Good Reads will open when article content is approved.
-          </h2>
+          <p className="eyebrow text-crowd-brown">Good Reads</p>
+          <h3 className="mt-4 max-w-xl text-3xl font-black tracking-tight md:text-5xl">
+            Stories are on the way.
+          </h3>
           <p className="mt-5 text-lg leading-8 text-crowd-brown/75">
-            The page is prepared for community profiles, event recaps, regional
-            discoveries and Good Crowd news without publishing fictional articles,
-            dates, authors or regions.
+            Good Reads will share community profiles, event stories, regional discoveries and news from Good Crowd.
           </p>
         </div>
       </div>
@@ -320,7 +315,7 @@ function ArticleCard({ article }: { article: GoodReadArticle }) {
         <p className="text-sm font-black uppercase tracking-[0.16em] text-crowd-brown">
           {article.category}
         </p>
-        <h2 className="mt-3 text-2xl font-black tracking-tight">{article.title}</h2>
+        <h3 className="mt-3 text-2xl font-black tracking-tight">{article.title}</h3>
         <p className="mt-4 leading-7 text-crowd-brown/75">{article.excerpt}</p>
         <Link
           href={`/stories/${article.slug}`}
