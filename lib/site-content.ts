@@ -171,9 +171,92 @@ export const founders = [
   {
     name: "Tamara de Lange",
     role: "Founder",
+    image: {
+      src: "/images/board/tamara-de-lange.webp",
+      alt: "Portrait of Tamara de Lange.",
+    },
   },
   {
     name: "Sarah Moore",
     role: "Founder",
+    image: {
+      src: "/images/board/sarah-moore.webp",
+      alt: "Portrait of Sarah Moore.",
+    },
+  },
+] as const;
+
+export const boardMembers = [
+  {
+    name: "Nadia Rullo",
+    role: "Chairperson",
+    image: {
+      src: "/images/board/nadia-rullo.webp",
+      alt: "Portrait of Nadia Rullo, Chairperson of Good Crowd Inc.",
+    },
+    placeholder: false,
+  },
+  {
+    name: "Sharon Welburn",
+    role: "Vice Chairperson",
+    image: {
+      src: "/images/board/sharon-welburn-placeholder.webp",
+      alt: "Temporary portrait placeholder for Sharon Welburn, Vice Chairperson of Good Crowd Inc.",
+    },
+    placeholder: true,
+  },
+  {
+    name: "Nara Martins de Souza",
+    role: "Secretary",
+    image: {
+      src: "/images/board/nara-martins-de-souza.webp",
+      alt: "Portrait of Nara Martins de Souza, Secretary of Good Crowd Inc.",
+    },
+    placeholder: false,
+  },
+  {
+    name: "Bronwyn Weir",
+    role: "Treasurer",
+    image: {
+      src: "/images/board/bronwyn-weir-placeholder.webp",
+      alt: "Temporary portrait placeholder for Bronwyn Weir, Treasurer of Good Crowd Inc.",
+    },
+    placeholder: true,
+  },
+  {
+    name: "Tamara de Lange",
+    role: "Board Member",
+    image: {
+      src: "/images/board/tamara-de-lange.webp",
+      alt: "Portrait of Tamara de Lange, Board Member of Good Crowd Inc.",
+    },
+    placeholder: false,
+  },
+  {
+    name: "Sarah Moore",
+    role: "Board Member",
+    image: {
+      src: "/images/board/sarah-moore.webp",
+      alt: "Portrait of Sarah Moore, Board Member of Good Crowd Inc.",
+    },
+    placeholder: false,
+  },
+  {
+    name: "Anton de Lange",
+    role: "Board Member",
+    image: {
+      src: "/images/board/anton-de-lange.webp",
+      alt: "Portrait of Anton de Lange, Board Member of Good Crowd Inc.",
+    },
+    placeholder: false,
+  },
+  {
+    name: "Matt Cahill",
+    role: "Board Member",
+    image: {
+      src: "/images/board/matt-cahill-placeholder.webp",
+      alt: "Temporary portrait placeholder for Matt Cahill, Board Member of Good Crowd Inc.",
+    },
+    placeholder: true,
   },
 ] as const;
