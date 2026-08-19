@@ -69,37 +69,35 @@ export function MobileMenu({ links }: MobileMenuProps) {
         </span>
       </button>
 
-      <div
-        id="mobile-navigation"
-        className={`fixed inset-x-4 top-24 z-40 rounded-[1.75rem] border border-crowd-brown/10 bg-crowd-cream p-5 shadow-crowd-lg transition duration-crowd ease-crowd ${
-          isOpen
-            ? "translate-y-0 opacity-100"
-            : "pointer-events-none -translate-y-3 opacity-0"
-        }`}
-      >
-        <nav aria-label="Mobile navigation">
-          <ul className="grid gap-2">
-            {links.map((link, index) => {
-              const isCurrent = pathname === link.href;
+      {isOpen ? (
+        <div
+          id="mobile-navigation"
+          className="fixed inset-x-4 top-24 z-40 rounded-[1.75rem] border border-crowd-brown/10 bg-crowd-cream p-5 shadow-crowd-lg transition duration-crowd ease-crowd"
+        >
+          <nav aria-label="Mobile navigation">
+            <ul className="grid gap-2">
+              {links.map((link, index) => {
+                const isCurrent = pathname === link.href;
 
-              return (
-                <li key={link.href}>
-                  <Link
-                    ref={index === 0 ? firstLinkRef : undefined}
-                    href={link.href}
-                    aria-current={isCurrent ? "page" : undefined}
-                    onClick={() => setIsOpen(false)}
-                    className="flex min-h-12 items-center justify-between rounded-2xl px-4 text-lg font-bold text-crowd-brown transition duration-crowd ease-crowd hover:bg-crowd-sand focus-visible:bg-crowd-sand focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-crowd-focus"
-                  >
-                    {link.label}
-                    <span aria-hidden="true">→</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
+                return (
+                  <li key={link.href}>
+                    <Link
+                      ref={index === 0 ? firstLinkRef : undefined}
+                      href={link.href}
+                      aria-current={isCurrent ? "page" : undefined}
+                      onClick={() => setIsOpen(false)}
+                      className="flex min-h-12 items-center justify-between rounded-2xl px-4 text-lg font-bold text-crowd-brown transition duration-crowd ease-crowd hover:bg-crowd-sand focus-visible:bg-crowd-sand focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-crowd-focus"
+                    >
+                      {link.label}
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      ) : null}
     </div>
   );
 }
