@@ -5,7 +5,7 @@ import { approvedGoodReads, storyCategories } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Good Reads",
   description:
-    "Good Reads is Good Crowd Inc.'s future editorial home for community profiles, event recaps, regional discoveries and Good Crowd news.",
+    "Stories from regional communities, events, places and Good Crowd Inc.",
 };
 
 export default function StoriesPage() {
@@ -14,7 +14,7 @@ export default function StoriesPage() {
       <SecondaryHero
         eyebrow="Good Reads"
         title="Stories from communities, events and regional discoveries."
-        intro="Good Reads is shaped as a future editorial home for community profiles, event recaps, regional discoveries and Good Crowd news."
+        intro="Good Reads is where we share the people, places, events and ideas that make regional communities worth discovering."
         image={{
           src: "/images/place/sheep-grazing-regional-landscape.jpeg",
           alt: "Sheep grazing across rolling regional pasture.",
@@ -27,9 +27,9 @@ export default function StoriesPage() {
         <div className="container-crowd">
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
             <div>
-              <p className="eyebrow text-crowd-brown">Editorial categories</p>
+              <p className="eyebrow text-crowd-brown">Explore Good Reads</p>
               <h2 className="display mt-4 text-4xl md:text-6xl">
-                A simple architecture for real stories when they are ready.
+                Regional stories worth sharing.
               </h2>
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-end">
@@ -53,15 +53,13 @@ export default function StoriesPage() {
       <section className="section-pad bg-crowd-brown text-crowd-cream">
         <div className="container-crowd grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="eyebrow text-crowd-sand">Content integrity</p>
+            <p className="eyebrow text-crowd-sand">From the regions</p>
             <h2 className="display mt-4 text-4xl md:text-6xl">
-              No fictional headlines, dates or event recaps.
+              Real people. Real places. Real stories.
             </h2>
           </div>
           <p className="max-w-2xl text-lg leading-8 text-crowd-cream/75 lg:justify-self-end">
-            The article grid, card model and future full-story pages are ready for
-            approved content, but Good Reads remains empty until real article
-            material is supplied.
+            Good Reads will grow with stories from communities, events and regional Australia as there is more to share.
           </p>
         </div>
       </section>
