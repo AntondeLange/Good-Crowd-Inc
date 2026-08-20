@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
+import { InfinityJourney } from "@/components/motion/infinity-journey";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -54,8 +55,13 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main-content">{children}</main>
-        <SiteFooter />
+        <div className="site-journey relative overflow-hidden">
+          <InfinityJourney />
+          <div className="relative z-[2]">
+            <main id="main-content">{children}</main>
+            <SiteFooter />
+          </div>
+        </div>
       </body>
     </html>
   );
