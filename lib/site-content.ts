@@ -172,7 +172,7 @@ export const founders = [
     name: "Tamara de Lange",
     role: "Founder",
     image: {
-      src: "/images/board/tamara-de-lange.webp",
+      src: "/images/board/GoodCrowd_Tamara_de_Lange_Board_Member.png",
       alt: "Portrait of Tamara de Lange.",
     },
   },
@@ -180,7 +180,7 @@ export const founders = [
     name: "Sarah Moore",
     role: "Founder",
     image: {
-      src: "/images/board/sarah-moore.webp",
+      src: "/images/board/GoodCrowd_Sarah_Moore_Board_Member.png",
       alt: "Portrait of Sarah Moore.",
     },
   },
@@ -200,10 +200,10 @@ export const boardMembers = [
     name: "Sharon Welburn",
     role: "Vice Chairperson",
     image: {
-      src: "/images/board/sharon-welburn-placeholder.webp",
-      alt: "Temporary portrait placeholder for Sharon Welburn, Vice Chairperson of Good Crowd Inc.",
+      src: "/images/board/GoodCrowd_Sharon_Welburn_Vice_Chairperson.png",
+      alt: "Portrait of Sharon Welburn, Vice Chairperson of Good Crowd Inc.",
     },
-    placeholder: true,
+    placeholder: false,
   },
   {
     name: "Nara Martins de Souza",
@@ -227,7 +227,7 @@ export const boardMembers = [
     name: "Tamara de Lange",
     role: "Board Member",
     image: {
-      src: "/images/board/tamara-de-lange.webp",
+      src: "/images/board/GoodCrowd_Tamara_de_Lange_Board_Member.png",
       alt: "Portrait of Tamara de Lange, Board Member of Good Crowd Inc.",
     },
     placeholder: false,
@@ -236,7 +236,7 @@ export const boardMembers = [
     name: "Sarah Moore",
     role: "Board Member",
     image: {
-      src: "/images/board/sarah-moore.webp",
+      src: "/images/board/GoodCrowd_Sarah_Moore_Board_Member.png",
       alt: "Portrait of Sarah Moore, Board Member of Good Crowd Inc.",
     },
     placeholder: false,
