@@ -57,8 +57,17 @@ export function InfinityJourney() {
   }, []);
 
   return (
-    <div ref={shellRef} aria-hidden="true" className="journey-shell pointer-events-none absolute inset-0 z-[1] overflow-hidden">
-      <svg viewBox="0 0 1200 4700" preserveAspectRatio="none" className="absolute left-1/2 top-0 h-full w-[1320px] max-w-none -translate-x-1/2 opacity-90 md:w-full" focusable="false">
+    <div
+      ref={shellRef}
+      aria-hidden="true"
+      className="journey-shell pointer-events-none absolute inset-0 z-[6] overflow-hidden"
+    >
+      <svg
+        viewBox="0 0 1200 4700"
+        preserveAspectRatio="none"
+        className="absolute left-1/2 top-0 h-full w-[1320px] max-w-none -translate-x-1/2 opacity-95 md:w-full"
+        focusable="false"
+      >
         <defs>
           <linearGradient id="journey-gold" x1="220" y1="90" x2="1010" y2="4560" gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor="var(--color-gold-deep)" stopOpacity="0.12" />
