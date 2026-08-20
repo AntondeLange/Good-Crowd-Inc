@@ -154,13 +154,13 @@ export default function AboutPage() {
               Goodness, connection, glee and community guide the work.
             </h2>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 md:auto-rows-fr">
             {values.map((value, index) => (
               <article
                 key={value.title}
-                className={`rounded-[1.5rem] border border-crowd-brown/10 p-6 shadow-crowd md:p-8 ${
+                className={`h-full rounded-[1.5rem] border border-crowd-brown/10 p-6 shadow-crowd md:p-8 ${
                   index === 0
-                    ? "bg-crowd-brown text-crowd-cream md:row-span-2"
+                    ? "bg-crowd-brown text-crowd-cream"
                     : index === 2
                       ? "bg-crowd-sand"
                       : "bg-crowd-mist"
