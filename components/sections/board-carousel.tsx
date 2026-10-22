@@ -20,12 +20,11 @@ export function BoardCarousel({ members }: { members: BoardMember[] }) {
   const carousel = useRef<HTMLDivElement>(null);
   const touchStart = useRef<number | null>(null);
   const [paused, setPaused] = useState(false);
-  const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const [inView, setInView] = useState(false);
   const [pageHidden, setPageHidden] = useState(false);
   const reducedMotion = useSyncExternalStore(subscribeReducedMotion, getReducedMotion, getServerReducedMotion);
-  const rotating = !paused && !hovered && !focused && !selected && !reducedMotion && inView && !pageHidden;
+  const rotating = !paused && !focused && !selected && !reducedMotion && inView && !pageHidden;
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.35 });
@@ -80,9 +79,7 @@ export function BoardCarousel({ members }: { members: BoardMember[] }) {
       role="region"
       aria-roledescription="carousel"
       aria-label="Board directors"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onFocusCapture={() => setFocused(true)}
+      onFocusCapture={(event) => setFocused(event.target.matches(":focus-visible"))}
       onBlurCapture={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
       }}
@@ -132,7 +129,7 @@ export function BoardCarousel({ members }: { members: BoardMember[] }) {
       <div className={styles.controls}>
         <button type="button" aria-label="Previous director" aria-controls={`${id}-portraits`} onClick={() => goTo((active - 1 + members.length) % members.length)}>←</button>
         <button type="button" aria-label="Next director" aria-controls={`${id}-portraits`} onClick={() => goTo((active + 1) % members.length)}>→</button>
-        <button type="button" className={styles.rotation} disabled={reducedMotion} aria-label={paused ? "Resume automatic rotation" : "Pause automatic rotation"} onClick={() => setPaused(value => !value)}>{reducedMotion ? "Manual rotation" : paused ? "Play" : "Pause"}</button>
+        <button type="button" className={styles.rotation} disabled={reducedMotion} aria-label={paused ? "Resume automatic rotation" : "Pause automatic rotation"} onClick={() => { setPaused(value => !value); setFocused(false); }}>{reducedMotion ? "Manual rotation" : paused ? "Play" : "Pause"}</button>
         <p aria-live={rotating ? "off" : "polite"} aria-atomic="true" className={styles.count}><span className="sr-only">{members[active].name}, director </span>{active + 1} / {members.length}</p>
       </div>
       <dialog

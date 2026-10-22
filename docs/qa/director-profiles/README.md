@@ -17,8 +17,8 @@ Validated against a local Next.js production build, served on port 3101.
   reduced motion enabled. Keyboard navigation and simulated touch-swipe handlers
   passed. No horizontal page overflow or browser runtime errors.
 - Browser clock checks: no change before 3 seconds, advance at 3 seconds,
-  all eight automatic rotations wrap to the Chairperson, hover pauses and exit
-  resumes, Pause/Play works, focus and an open profile suspend rotation, and
+  all eight automatic rotations wrap to the Chairperson, rotation continues under the pointer, Pause/Play works with focus retained,
+  keyboard focus and an open profile suspend rotation, and
   switching to reduced motion stops automatic rotation.
 - Popup close-button/backdrop dismissal was checked in the original feature;
   this revision rechecked all eight popup profiles with Escape and focus restore.
@@ -44,3 +44,17 @@ hidden, appears on portrait hover, hides on pointer exit, and appears on visible
 keyboard focus. Enter still opens the profile. A separate mobile touch emulation
 check confirms tapping the portrait opens its profile. The carousel screenshots
 were refreshed to show the default state without the overlay.
+
+## Automatic rotation preview fix
+
+Reproduced on the authenticated Vercel branch preview before the fix: the central
+name advanced Nadia → Sharon without hover, stayed Sharon for 3.3 seconds while
+hovered, and stayed Sharon after Pause followed by Play with focus retained.
+
+Removed the broad mouse-hover pause. Pointer clicks no longer count as keyboard
+focus pauses, and explicit Play clears the focus pause. Keyboard focus, an open
+profile, manual Pause, reduced motion, offscreen and hidden-tab conditions are
+retained. Local lint/typecheck/build passed. Browser-clock regression checks
+confirmed three-second timing, all eight directors looping, continued rotation
+under hover, and immediate Play resumption with pointer/focus retained. All eight
+profiles and layout checks passed again at 320/390/768/1440px.

@@ -31,8 +31,10 @@ both at 50% opacity. Each rotation brings the next director to the centre and
 wraps continuously from 8 back to 1.
 
 Automatic rotation advances every 3 seconds while the carousel is in view.
-Pause/Play controls provide an explicit stop/resume choice. Rotation also pauses
-on mouse hover, keyboard focus, an open profile, a hidden browser tab or when
+Pause/Play controls provide an explicit stop/resume choice. Hovering or clicking
+the navigation controls does not pause rotation. Play resumes immediately,
+including while the Play control retains focus. Rotation also pauses
+on keyboard focus, an open profile, a hidden browser tab or when
 the carousel is outside the viewport. Reduced-motion users receive manual
 navigation with no carousel transitions or hover scaling. Autoplay changes are
 not announced by live regions.
