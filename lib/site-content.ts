@@ -172,7 +172,7 @@ export const founders = [
     name: "Tamara de Lange",
     role: "Founder",
     image: {
-      src: "/images/board/GoodCrowd_Tamara_de_Lange_Board_Member.png",
+      src: "/images/directors/tamara.webp",
       alt: "Portrait of Tamara de Lange.",
     },
   },
@@ -180,83 +180,100 @@ export const founders = [
     name: "Sarah Moore",
     role: "Founder",
     image: {
-      src: "/images/board/GoodCrowd_Sarah_Moore_Board_Member.png",
+      src: "/images/directors/sarah.webp",
       alt: "Portrait of Sarah Moore.",
     },
   },
 ] as const;
 
-export const boardMembers = [
+export type BoardMember = {
+  name: string;
+  role: string;
+  image: { src: string; alt: string };
+  placeholder: boolean;
+  /** Approved biography paragraphs. Leave empty until supplied. */
+  bio: string[];
+};
+
+export const boardMembers: BoardMember[] = [
   {
     name: "Nadia Rullo",
     role: "Chairperson",
     image: {
-      src: "/images/board/nadia-rullo.webp",
+      src: "/images/directors/nadia.webp",
       alt: "Portrait of Nadia Rullo, Chairperson of Good Crowd Inc.",
     },
+    bio: [],
     placeholder: false,
   },
   {
     name: "Sharon Welburn",
     role: "Vice Chairperson",
     image: {
-      src: "/images/board/GoodCrowd_Sharon_Welburn_Vice_Chairperson.png",
+      src: "/images/directors/sharon.webp",
       alt: "Portrait of Sharon Welburn, Vice Chairperson of Good Crowd Inc.",
     },
+    bio: [],
     placeholder: false,
   },
   {
     name: "Nara Martins de Souza",
     role: "Secretary",
     image: {
-      src: "/images/board/nara-martins-de-souza.webp",
+      src: "/images/directors/nara.webp",
       alt: "Portrait of Nara Martins de Souza, Secretary of Good Crowd Inc.",
     },
+    bio: [],
     placeholder: false,
   },
   {
     name: "Bronwyn Weir",
     role: "Treasurer",
     image: {
-      src: "/images/board/bronwyn-weir-placeholder.webp",
+      src: "/images/directors/bronwyn.webp",
       alt: "Temporary portrait placeholder for Bronwyn Weir, Treasurer of Good Crowd Inc.",
     },
+    bio: [],
     placeholder: true,
   },
   {
     name: "Tamara de Lange",
     role: "Board Member",
     image: {
-      src: "/images/board/GoodCrowd_Tamara_de_Lange_Board_Member.png",
+      src: "/images/directors/tamara.webp",
       alt: "Portrait of Tamara de Lange, Board Member of Good Crowd Inc.",
     },
+    bio: [],
     placeholder: false,
   },
   {
     name: "Sarah Moore",
     role: "Board Member",
     image: {
-      src: "/images/board/GoodCrowd_Sarah_Moore_Board_Member.png",
+      src: "/images/directors/sarah.webp",
       alt: "Portrait of Sarah Moore, Board Member of Good Crowd Inc.",
     },
+    bio: [],
     placeholder: false,
   },
   {
     name: "Anton de Lange",
     role: "Board Member",
     image: {
-      src: "/images/board/anton-de-lange.webp",
+      src: "/images/directors/anton.webp",
       alt: "Portrait of Anton de Lange, Board Member of Good Crowd Inc.",
     },
+    bio: [],
     placeholder: false,
   },
   {
     name: "Matt Cahill",
     role: "Board Member",
     image: {
-      src: "/images/board/matt-cahill-placeholder.webp",
-      alt: "Temporary portrait placeholder for Matt Cahill, Board Member of Good Crowd Inc.",
+      src: "/images/directors/matt.webp",
+      alt: "Portrait of Matt Cahill, Board Member of Good Crowd Inc.",
     },
-    placeholder: true,
+    bio: [],
+    placeholder: false,
   },
-] as const;
+];
