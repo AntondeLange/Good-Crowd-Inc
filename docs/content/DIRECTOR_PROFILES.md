@@ -42,3 +42,7 @@ director; vertical page scrolling remains available. Left/Right/Home/End keys
 work while the central profile button is focused. Enter/Space opens the profile.
 The modal supports Escape, its close button and backdrop dismissal, locks page
 scrolling and restores opener focus. Biographies remain plain-text paragraphs.
+
+The “View profile” overlay is hidden by default and appears on hover or visible
+keyboard focus on the central portrait. The portrait itself remains clickable
+and tappable to open a profile without needing the overlay.

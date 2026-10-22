@@ -6,7 +6,9 @@
 .card[data-position="left"] { z-index: 2; opacity: .5; transform: translate(-122%, -50%) scale(.8); }
 .card[data-position="right"] { z-index: 2; opacity: .5; transform: translate(22%, -50%) scale(.8); }
 .card[data-position="hidden"] { visibility: hidden; pointer-events: none; opacity: 0; transform: translate(-50%, -50%) scale(.65); }
-.card:not([data-position="center"]) .openLabel { visibility: hidden; }
+.openLabel { visibility: hidden; pointer-events: none; }
+.card[data-position="center"] .portrait:hover .openLabel,
+.card[data-position="center"] .portrait:focus-visible .openLabel { visibility: visible; }
 .caption { text-align: center; min-height: 7rem; padding-top: .5rem; }
 .portrait { position: relative; display: block; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 1.5rem; background: var(--color-sand); border: 0; cursor: zoom-in; }
 .image { object-fit: contain; transition: transform 300ms ease; }

@@ -35,3 +35,12 @@ separate applicability review and dependency update.
 
 Rollback: revert the director-profile feature commit to restore the prior board
 grid and image references. No schema, service or environment changes are needed.
+
+## Hover-only profile label follow-up
+
+Lint, typecheck and production build passed. Local production browser checks at
+320, 390, 768 and 1440px confirm that the central “View profile” overlay starts
+hidden, appears on portrait hover, hides on pointer exit, and appears on visible
+keyboard focus. Enter still opens the profile. A separate mobile touch emulation
+check confirms tapping the portrait opens its profile. The carousel screenshots
+were refreshed to show the default state without the overlay.
