@@ -25,8 +25,20 @@ is preserved. Bronwyn's supplied illustration remains explicitly marked as a
 photo placeholder. Matt's new supplied portrait replaces his old placeholder.
 The homepage founder portraits use the same new Tamara and Sarah images.
 
-The carousel supports native horizontal touch/trackpad scrolling, previous/next
-buttons with wraparound, and Left/Right/Home/End keys while a profile button is
-focused. Enter/Space opens the profile. The modal supports Escape, its close
-button and backdrop dismissal, locks page scrolling and restores opener focus.
-Reduced motion disables animated scrolling and portrait hover transforms.
+The carousel starts with the Chairperson (director 1) centred at full opacity.
+Director 8 sits smaller behind on the left and director 2 behind on the right,
+both at 50% opacity. Each rotation brings the next director to the centre and
+wraps continuously from 8 back to 1.
+
+Automatic rotation advances every 3 seconds while the carousel is in view.
+Pause/Play controls provide an explicit stop/resume choice. Rotation also pauses
+on mouse hover, keyboard focus, an open profile, a hidden browser tab or when
+the carousel is outside the viewport. Reduced-motion users receive manual
+navigation with no carousel transitions or hover scaling. Autoplay changes are
+not announced by live regions.
+
+Previous/next buttons wrap in both directions. Horizontal touch swipes move one
+director; vertical page scrolling remains available. Left/Right/Home/End keys
+work while the central profile button is focused. Enter/Space opens the profile.
+The modal supports Escape, its close button and backdrop dismissal, locks page
+scrolling and restores opener focus. Biographies remain plain-text paragraphs.

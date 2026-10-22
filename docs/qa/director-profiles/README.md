@@ -1,6 +1,6 @@
 # Director profile verification — 22 October 2026
 
-Validated against a local Next.js production build, served on port 3100.
+Validated against a local Next.js production build, served on port 3101.
 
 - `npm run lint`: passed.
 - `npm run typecheck`: passed.
@@ -10,10 +10,18 @@ Validated against a local Next.js production build, served on port 3100.
   open, portrait images decode, empty bios show their pending message, close
   receives focus, Tab stays within the dialog, Escape closes, focus returns to
   the opener and page scroll is restored.
+- Initial composition checked at all four widths: Chairperson centred, director 8
+  behind left, director 2 behind right, exactly three visible portraits, and
+  smaller side portraits at 50% opacity. Centre alignment verified geometrically.
 - Previous/next navigation and wraparound passed at all four widths with
-  reduced motion enabled. No horizontal page overflow or browser runtime errors.
-- Normal-motion navigation, Home/End/Right arrow/Enter, close-button and backdrop
-  dismissal were checked separately on desktop.
+  reduced motion enabled. Keyboard navigation and simulated touch-swipe handlers
+  passed. No horizontal page overflow or browser runtime errors.
+- Browser clock checks: no change before 3 seconds, advance at 3 seconds,
+  all eight automatic rotations wrap to the Chairperson, hover pauses and exit
+  resumes, Pause/Play works, focus and an open profile suspend rotation, and
+  switching to reduced motion stops automatic rotation.
+- Popup close-button/backdrop dismissal was checked in the original feature;
+  this revision rechecked all eight popup profiles with Escape and focus restore.
 - Screenshots: `board-{width}.png` and `profile-{width}.png`.
 
 This is browser emulation, not physical-device or screen-reader testing.
