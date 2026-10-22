@@ -58,3 +58,13 @@ retained. Local lint/typecheck/build passed. Browser-clock regression checks
 confirmed three-second timing, all eight directors looping, continued rotation
 under hover, and immediate Play resumption with pointer/focus retained. All eight
 profiles and layout checks passed again at 320/390/768/1440px.
+
+## Anton and Matt full-width portraits
+
+Anton and Matt use top-aligned `object-fit: cover` in both the carousel and popup
+so their taller source images fill the available width without side gaps.
+Browser checks passed at 320/390/768/1440px, including image decoding, cover fit,
+top alignment, popup opening and no horizontal page overflow. Mobile and desktop
+screenshots are saved as `anton-filled-*`, `matt-filled-*`,
+`anton-profile-filled-*` and `matt-profile-filled-*`. Visual review confirmed faces
+and the top Good Crowd logos remain visible. Lint, typecheck and build passed.

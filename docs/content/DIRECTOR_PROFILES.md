@@ -20,8 +20,9 @@ were retained for this image/interaction update. Confirm any changes against
 current Board records before publication.
 
 The supplied October 2026 portraits are optimised WebP files in
-`public/images/directors/`. The full supplied composition, including its logo,
-is preserved. Bronwyn's supplied illustration remains explicitly marked as a
+`public/images/directors/`. Portraits normally retain the full supplied composition, including its logo.
+Anton and Matt use `image.fillWidth: true` to fill the carousel and profile
+image areas with a top-aligned cover crop, keeping the top logo visible. Bronwyn's supplied illustration remains explicitly marked as a
 photo placeholder. Matt's new supplied portrait replaces his old placeholder.
 The homepage founder portraits use the same new Tamara and Sarah images.
 

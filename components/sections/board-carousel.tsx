@@ -115,7 +115,7 @@ export function BoardCarousel({ members }: { members: BoardMember[] }) {
               tabIndex={index === active ? 0 : -1}
               onClick={(event) => { opener.current = event.currentTarget; setSelected(member); }}
             >
-              <Image src={member.image.src} alt={member.image.alt} fill sizes="(max-width: 640px) 70vw, 448px" className={styles.image} />
+              <Image src={member.image.src} alt={member.image.alt} fill sizes="(max-width: 640px) 70vw, 448px" className={styles.image} data-fill-width={member.image.fillWidth} />
               <span className={styles.openLabel} aria-hidden="true">View profile <span>↗</span></span>
             </button>
           </li>
@@ -149,7 +149,7 @@ export function BoardCarousel({ members }: { members: BoardMember[] }) {
       >
         {selected && <div className={styles.panel}>
           <button type="button" autoFocus className={styles.close} aria-label="Close director profile" onClick={() => setSelected(null)}>×</button>
-          <div className={styles.modalPortrait}><Image src={selected.image.src} alt={selected.image.alt} fill sizes="(max-width: 640px) 90vw, 480px" className={styles.modalImage} /></div>
+          <div className={styles.modalPortrait}><Image src={selected.image.src} alt={selected.image.alt} fill sizes="(max-width: 640px) 90vw, 480px" className={styles.modalImage} data-fill-width={selected.image.fillWidth} /></div>
           <div className={styles.biography}>
             <p className="eyebrow">Our Board</p>
             <h2 id={`${id}-name`} className="display">{selected.name}</h2>

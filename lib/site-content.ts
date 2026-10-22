@@ -189,7 +189,7 @@ export const founders = [
 export type BoardMember = {
   name: string;
   role: string;
-  image: { src: string; alt: string };
+  image: { src: string; alt: string; fillWidth?: boolean };
   placeholder: boolean;
   /** Approved biography paragraphs. Leave empty until supplied. */
   bio: string[];
@@ -261,6 +261,7 @@ export const boardMembers: BoardMember[] = [
     role: "Board Member",
     image: {
       src: "/images/directors/anton.webp",
+      fillWidth: true,
       alt: "Portrait of Anton de Lange, Board Member of Good Crowd Inc.",
     },
     bio: [],
@@ -271,6 +272,7 @@ export const boardMembers: BoardMember[] = [
     role: "Board Member",
     image: {
       src: "/images/directors/matt.webp",
+      fillWidth: true,
       alt: "Portrait of Matt Cahill, Board Member of Good Crowd Inc.",
     },
     bio: [],
