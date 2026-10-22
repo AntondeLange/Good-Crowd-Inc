@@ -87,12 +87,10 @@ export function BoardCarousel({ members }: { members: BoardMember[] }) {
         if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
       }}
     >
-      <p className={styles.hint} id={`${id}-hint`}>Explore the Board. Select a portrait to open their profile.</p>
       <ul
         ref={track}
         id={`${id}-portraits`}
         className={styles.track}
-        aria-describedby={`${id}-hint`}
         onTouchStart={(event) => { touchStart.current = event.touches[0].clientX; }}
         onTouchEnd={(event) => {
           if (touchStart.current === null) return;
